@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 		closeNav();
 	});
 
-	//close lateral menu on mobile 
+	//close lateral menu on mobile
 	$('.cd-overlay').on('swiperight', function(){
 		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
 			closeNav();
@@ -52,7 +52,7 @@ jQuery(document).ready(function($){
 	});
 
 
-	//prevent default clicking on direct children of .cd-primary-nav 
+	//prevent default clicking on direct children of .cd-primary-nav
 	$('.cd-primary-nav').children('.has-children').children('a').on('click', function(event){
 		event.preventDefault();
 	});
@@ -73,6 +73,7 @@ jQuery(document).ready(function($){
 		toggleSearch('close');
 	}).on('mouseleave', function(event){
 		if( !checkWindowWidth() ) event.preventDefault();
+		var selected = $(this);
 		if( selected.next('ul').hasClass('is-hidden') ) {
 			selected.addClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
 			selected.parent('.has-children').siblings('.has-children').children('ul').removeClass('is-hidden').end().children('a').addClass('selected');
@@ -80,7 +81,7 @@ jQuery(document).ready(function($){
 		} else {
 			selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
 			$('.cd-overlay').addClass('is-visible');
-		} 
+		}
 	});
 
 	//submenu items - go back link
@@ -102,7 +103,7 @@ jQuery(document).ready(function($){
 
 	function toggleSearch(type) {
 		if(type=="close") {
-			//close serach 
+			//close serach
 			$('.cd-search').removeClass('is-visible');
 			$('.cd-search-trigger').removeClass('search-is-visible');
 			$('.cd-overlay').removeClass('search-is-visible');
@@ -118,7 +119,7 @@ jQuery(document).ready(function($){
 
 	function checkWindowWidth() {
 		//check window width (scrollbar included)
-		var e = window, 
+		var e = window,
             a = 'inner';
         if (!('innerWidth' in window )) {
             a = 'client';

@@ -1315,6 +1315,9 @@ input[type=checkbox]:checked + .input--primary:before {
   background-color: #52d2ca !important;
   padding: 10px 15px 8px !important;
 }
+.js-tab-pane {
+  display: none;
+}
 .radio__container {
   background-color: rgba(47, 69, 144, 0.7);
 }
