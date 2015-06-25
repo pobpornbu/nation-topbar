@@ -1,0 +1,208 @@
+input, textarea, button, select {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+// Placeholder
+// ---------------------------------------
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {  
+   color: @gray-step-4;  
+}
+
+// Search
+// ---------------------------------------
+// <div class="form-group input__wrap --icon">
+//   <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
+//   <i class="fa fa-search input__icon --search"></i>
+// </div>
+      
+input[type=search] {
+  .appearance(textfield);
+  .box-sizing(content-box);
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.component(input {
+  .part(search {
+    width: 100px;
+    .round;
+    .transition(all .5s);
+
+    &:focus {
+      width: 150px;
+    }
+  });
+  .part(icon {
+    .option(search {
+      font-size: 16px;
+      color: @gray-step-5;
+      .input-text-height();
+      line-height: @height;
+    });
+  });
+});
+
+// Input
+// ---------------------------------------
+.input-text-height(){
+  @height: 34px; 
+  @padding-vertical: 4px; 
+  @padding-horizontal: 10px
+}
+
+.text__label {
+  .input-text-height();
+  padding: @padding-vertical @padding-horizontal;
+  line-height: @height - (@padding-vertical * 2);
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+// Theme
+.theme-input-primary {
+  .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
+}
+
+.component(input{
+  display: inline-block;
+  position: relative;
+  .box-shadow(none);
+  .part(wrap{
+    .option(icon{
+      position: relative;
+    });
+  });
+  .part(text{
+    width: 100%;
+    .radius;
+  });
+  .part(textarea {
+    width: 100%;
+    .radius;
+    // line-height: 34px !important;
+  });
+  .part(icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    .input-text-height();
+    width: @height;
+    height: @height;
+    text-align: center;
+  });
+
+  .option(primary{
+    .input-text-height();
+    height: @height;
+    // line-height: @height;
+    padding: @padding-vertical @padding-horizontal;
+    margin: 0;
+    // Set margin-bottom at .form-group
+    .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
+  });
+});
+
+
+// Textarea
+// ---------------------------------------
+
+.no-textarea-style {
+  .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, rgba(255,255,255,0));
+  box-shadow: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none; 
+  overflow: auto; // prevent scrollbar in IE
+}
+
+
+// Radio
+// ------------------------------------------------------
+// <fieldset class="form-group">
+//   <input id="female" name="gender" type="radio">
+//   <label class="input__radio"  for="female"> Female </label>
+//   <input id="male" name="gender" type="radio" >
+//   <label class="input__radio" for="male"> Male </label>
+// </fieldset>
+
+input[type=radio],input[type=checkbox]{
+  display: none;
+}
+.input__radio, .input__checkbox {
+  display: inline-block;
+  cursor: pointer;
+}
+.input__radio:before, .input__checkbox:before {
+  font-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align:middle;
+  text-align: center;
+  border-radius: 10px;
+}
+.input__radio:before {
+  .icon-iconicon("\f3a6");
+}
+input[type=radio]:checked + .input__radio:before {
+  .icon-iconicon("\f3a7");
+}
+
+// Checkbox
+// ------------------------------------------------------
+// <fieldset class="form-group">
+//   <input type="checkbox" id="subscribe" name="subscribe">
+//   <label class="input__checkbox --primary" for="subscribe">I agree to the Term of Use and Privacy Policy</label>
+// </fieldset>
+
+.input__checkbox:before {
+  .icon-iconicon("\f372");
+}
+
+input[type=checkbox]:checked + .input__checkbox:before {
+  .icon-iconicon("\f374");
+}
+
+// Theme color for radio and checkbox
+// ------------------------------------------------------
+.input--primary {
+  .input-radio-checkbox-color(@input-radio-color-theme, before);
+}
+input[type=radio]:checked + .input--primary:before,
+input[type=checkbox]:checked + .input--primary:before {
+  color: @color-primary;
+}
+
+// Submenu
+// ------------------------------------------------------
+
+.component(tab{
+  .part(container{
+    display: block;
+    float: left;
+    width: 202px;
+    .active a {
+      #nation-radio-theme & {
+        color: @black;
+      }
+    }
+  });
+});

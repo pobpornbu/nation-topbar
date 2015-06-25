@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Nation Radio</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navleft.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <meta name="google-site-verification" content="">
+
+  <!-- app icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="frontend/images/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="frontend/images/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="frontend/images/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="frontend/images/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="frontend/images/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="frontend/images/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="frontend/images/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="frontend/images/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="frontend/images/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="frontend/images/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="frontend/images/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="frontend/images/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="frontend/images/ico/favicon-16x16.png">
+  <link rel="manifest" href="frontend/images/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="frontend/images/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Authorship and Publisher Markup -->
+  <link rel="publisher" href="">
+  <link rel="author" href="">
+
+  <!-- Open Graph data (facebook) -->
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="article:tag" content="">
+  <meta property="fb:app_id" content="">
+  <meta property="fb:admins" content="">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+  <link rel="image_src" type="image/jpeg" href="">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:image:src" content="">
+  <!-- Jw player -->
+  <script src="http://jwpsrv.com/library/4XUSqnfuEeOW7yIACmOLpg.js"></script>
+  <script type="text/javascript">
+    var primaryCookie = 'html5';
+    var skinURL = "nationradioskin/nationradioskin.xml";
+    
+    var cookies = document.cookie.split(";");
+    for (i=0; i < cookies.length; i++) {
+        var x = cookies[i].substr(0, cookies[i].indexOf("="));
+        var y = cookies[i].substr(cookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g,"");
+        if (x == 'primaryCookie') {
+            primaryCookie = y;
+        } else if (x == 'skinURL') { 
+            skinURL = y;
+        }
+    }
+  </script>
+  <script type="text/javascript">
+    document.getElementById('skin').value = skinURL;
+    function reload() {
+        skinURL = document.getElementById('skin').value;
+        document.cookie = "skinURL=" + skinURL;
+        window.location.reload();
+        return false;
+    };
+  </script>
+</head>
+<body id="nation-radio-theme" class="nav-on-left">
+  <header class="cd-main-header">
+    <a class="cd-logo logo__container --small" href="index.html">
+      <!-- <img src="images/logo-nation-radio-small.png" alt="Nation Radio Logo"> -->
+    </a>
+
+    <ul class="cd-header-buttons">
+      <li><a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a></li>
+      <li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
+    </ul> <!-- cd-header-buttons -->
+  </header>
+
+  <main class="cd-main-content">
+    <!-- your content here -->
+    <div id="radio-page" class="container">
+      <div class="row hidden-xs">
+        <div class="col-xs-12" style="height:30px"></div>
+      </div>
+      <div class="row">       
+        <div class="col-sm-8 col-sm-push-4 radioplayer__container text-center">
+          <div><img src="images/onair.png" alt="Now On air logo" class="radio__logo"></div>
+          <div><img src="/images/equalizer-web.gif" alt="radio equalizer" class="radio__img"></div>
+          <main class="radioplayer__wrap clearfix">
+            <div>
+              <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
+              <button class="button --icon --play --expand js-btn-radio">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              <!-- <button class="button --icon --play --expand fa-play-circle js-play" onclick="play()">FM 90.5 <span class="hidden-sm">MHz</span></button> -->
+            </div>
+            <div>
+              <p class="radio__text">------------------------</p>
+              <button class="button --icon --play --expand js-btn-radio">FM 102 <span class="hidden-sm">MHz</span></button>
+            </div>
+            <div id="audio"></div>
+          </main>
+        </div>
+        <section class="col-sm-4 col-sm-pull-8 radio__container">
+          <header class="radio__header clearfix">
+            <hgroup class="radio__head"><h1 class="radio__h1">Nation Digital</h1><h2 class="radio__h2">live broadcast</h2></hgroup>
+          </header>
+            <section class="prevclip__container">
+              <h2 class="prevclip__head">ฟังรายการย้อนหลัง</h2>
+              <ul id="previous-clip" class="prevclip__wrap">
+                <li class="prevclip__item prevclip__item--1 active">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                <li class="prevclip__item prevclip__item--2">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                <li class="prevclip__item prevclip__item--3">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                <li class="prevclip__item prevclip__item--4">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">consectetur</span></li>
+                <li class="prevclip__item prevclip__item--5">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">adipisicing elit</span></li>
+                <li class="prevclip__item prevclip__item--6">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Culpa aspernatur</span></li>
+                <li class="prevclip__item prevclip__item--7">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">aut harum</span></li>
+                <li class="prevclip__item prevclip__item--8">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">id porro natus ea</span></li>
+                <li class="prevclip__item active">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                <li class="prevclip__item">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                <li class="prevclip__item">
+                  <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+              </ul>
+            </section>
+        </section>
+        <script type="text/javascript">
+          jwplayer("audio").setup({
+              playlist: [{
+                file: 'http://content.jwplatform.com/videos/bkaovAYt-I3ZmuSFT.m4a',
+              },{
+                file: 'http://content.jwplatform.com/videos/3XnJSIm4-I3ZmuSFT.m4a'
+              },{
+                file: 'http://content.jwplatform.com/videos/i8oQD9zd-I3ZmuSFT.m4a'
+              }],
+              width: "300px",
+              height: "32px",
+              primary: primaryCookie,
+              skin: "nationradioskin/nationradioskin.xml"
+          });
+        </script>
+      </div>
+    </div>
+  </main>
+
+  <div class="cd-overlay"></div>
+
+  <nav class="cd-nav">
+    <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+      <div class="logo__container --large text-center visible-xs-block">
+        <img src="images/logo-nation-radio-large.png" alt="Nation Radio Logo" class="logo --large">
+      </div>
+      <li class="menu__item"><a class="menu__link" href="#">ข่าว</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">ผังรายการ</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">ผู้ดำเนินรายการ</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">กิจกรรม</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">เกี่ยวกับเรา</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">ติดต่อเรา</a></li>
+      <li class="social__wrap">
+        <a class="social__icon" href="//www.facebook.com/NationChannelTV" target="_blank">
+          <i class="fa fa-facebook-square social__icon --topbar"></i></a>
+        <a class="social__icon" href="//www.twitter.com/nationTV22" target="_blank">
+          <i class="fa fa-twitter-square social__icon --topbar"></i></a>
+        <a class="social__icon" href="//plus.google.com/113463480259329482237" target="_blank"> 
+          <i class="fa fa-google-plus-square social__icon --topbar"></i></a>
+        <!-- <a class="social__icon" href="//instagram.com/nationtv22/" target="_blank">
+          <i class="fa fa-instagram social__icon --topbar"></i></a> -->
+        <a class="social__icon" href="//www.youtube.com/channel/UCIoFfVIOrRRbI-WVdDhTTwg" target="_blank">
+          <i class="fa fa-youtube-square social__icon --topbar"></i></a>
+        <span class="[ hidden-xs ] menu__text">วันที่ 15 สิงหาคม 2558</span>
+      </li>
+    </ul> <!-- primary-nav -->
+  </nav> <!-- cd-nav -->
+
+  <div id="cd-search" class="cd-search search__container">
+    <form>
+      <input type="search" class="search__input" placeholder="Search...">
+    </form>
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script src=""></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
+  <script src="bower_components/autosize/dest/autosize.min.js"></script>
+  <script src="js/component.js"></script>
+  <script src="js/navleft.js"></script>
+  <script src="js/select.js"></script>
+  <script>
+    $('.js-btn-radio').on('click', function(){
+      console.log('play');
+      jwplayer('audio').play(); 
+      $(this).toggleClass("js-play");
+      return false;
+    });
+  // function play(){
+  //   console.log('play');
+  //   jwplayer('audio').play(); 
+  //   return false;
+  // }
+</script>
+  <script src="js/jquery.mCustomScrollbar.min.js"></script>
+  <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
+  </body>
+</html>

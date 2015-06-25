@@ -1,0 +1,117 @@
+// components
+.component(@c-el; @c-arguments;){
+	.@{c-el}{	
+		@c-arguments();
+	}
+}
+
+// options
+// override components
+.option(@o-el; @o-arguments;){
+	&.\--@{o-el}{
+	   @o-arguments();
+	}
+}
+
+// parts 
+// make up the structure of a component
+// override components
+.part(@p-el; @p-arguments){
+	&__@{p-el}{
+	   @p-arguments();
+	}
+}
+
+// tweaks
+// override components, options, and modifiers
+.tweak(@t-el; @t-arguments; @t-el-top:"";){
+  //Check when element wrapper to blank value (is="")		
+  & when (isstring(@t-el-top)){	
+	  &.\+@{t-el}{
+	    @t-arguments();
+	  }
+  }	  
+  //Check when element wrapper to keyword (is=element name don't use double qoute)
+  & when (iskeyword(@t-el-top)){
+  	#@{t-el-top} .\+@{t-el}{
+    	@t-arguments();
+  	}
+  }
+}
+
+// locations
+// override components, parts, options, and tweaks
+.location(@l-el; @l-arguments;){
+	.\@@{l-el} {
+		@l-arguments();
+	}
+}
+
+
+*{
+	margin 	: 0;
+	padding	: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: "helvetica";
+}
+
+//Button A
+.location(
+	task;
+	{
+		text-align: center;
+		.component(button
+			{
+				background: #6BD9ED;
+  				padding: 15px;
+  				display: inline-block;
+  				text-decoration: none;
+				.option(action
+					{
+						color: #1F1F1F;
+    					background: #A7E040;
+    					transition: background 0.3s linear;
+						&:hover{
+							background: red;	
+						}
+					}
+				);//End option
+				.part(icon
+					{
+						font-size: 21px;
+    					position: relative;
+    					top: 0;
+						.option(bullhorn
+							{
+								&:before{
+        							content: "\e61b";
+      							}
+							}
+						);//End option				
+					}
+				);//End part
+				.tweak(rounded;
+					{
+						border-radius: 10px;
+					}	
+				);//End tweak	
+				// .tweak(
+				// 	glass;
+				// 	{
+				// 		box-shadow: inset 0 0 6px rgba(0,0,0,.8), inset 0 9px 1px rgba(0,0,0,.1); 
+				// 	}
+				// );//End tweak					
+			}
+		);//End component
+	}
+);//End location
+// Button A	
+
+.tweak(
+	glass; @t-el-top:home;
+	{
+		box-shadow: inset 0 0 6px rgba(0,0,0,.8), inset 0 9px 1px rgba(0,0,0,.1); 
+	}
+);//End tweak

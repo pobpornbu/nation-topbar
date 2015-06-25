@@ -1,0 +1,47 @@
+.component(footer{
+	.part(wrap{
+		color: @white;
+		.option(top{
+			background-color: @color-brand-primary;
+			padding: 30px 0;
+		});
+		.option(bottom{
+			background-color: @blue-dark;
+			padding: 10px 0;
+		});
+		.option(link{
+			text-align: center;
+			line-height: 1.5;
+			&:first-of-type {
+				margin: 0 20px;
+			}
+			@media screen and (min-width: 768px) {
+				text-align: left;
+				&:first-of-type {
+					margin: -5px 0 0 0;
+				}
+			}
+		});
+	});
+	.part(select{
+		.font-kanda(14px, 700);
+		text-align: center;
+		margin-bottom: 14px;
+		.select__wrap {
+			text-align: left;
+		}
+		@media screen and (min-width: 768px) {
+			// text-align: left;
+			float: right;
+			margin-right: 5%;
+			margin-bottom: 0;
+		}
+	});
+	.part(address{
+		margin-bottom: 0;
+		font-size: 12px !important;
+		@media screen and (min-width: 768px) {
+			font-size: 14px;
+		}
+	});
+});

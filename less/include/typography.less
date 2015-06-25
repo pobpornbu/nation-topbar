@@ -1,0 +1,26 @@
+.component(content{
+	.part(text{
+		.option(primary{
+			.font-kanda(14px);
+			color: @white;		
+		});
+		.option(link{
+			.font-kanda(14px);
+			color: @white;		
+			&:hover {
+				text-decoration: underline;
+  			color: rgb(246, 179, 0);
+			}
+		});
+		.option(submenu{
+			.font-kanda(14px, 700);
+			color: rgb(102, 102, 102);
+			white-space: initial;
+			&:hover {
+      	#nation-nav-theme & {
+					color: rgb(102, 102, 102);
+				}
+			}
+		});
+	});
+});

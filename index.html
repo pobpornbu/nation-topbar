@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Nation Radio</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navleft.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <meta name="google-site-verification" content="">
+
+  <!-- app icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="frontend/images/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="frontend/images/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="frontend/images/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="frontend/images/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="frontend/images/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="frontend/images/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="frontend/images/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="frontend/images/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="frontend/images/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="frontend/images/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="frontend/images/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="frontend/images/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="frontend/images/ico/favicon-16x16.png">
+  <link rel="manifest" href="frontend/images/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="frontend/images/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Authorship and Publisher Markup -->
+  <link rel="publisher" href="">
+  <link rel="author" href="">
+
+  <!-- Open Graph data (facebook) -->
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="article:tag" content="">
+  <meta property="fb:app_id" content="">
+  <meta property="fb:admins" content="">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+  <link rel="image_src" type="image/jpeg" href="">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:image:src" content="">
+</head>
+<body id="nation-radio-theme" class="nav-on-left" ng-app="NationRadio">
+  <div id="nation-nav-theme">
+    <header class="cd-main-header">
+      <a class="cd-logo logo__container --small" href="index.html">
+        <!-- <img src="images/logo-nation-radio-small.png" alt="Nation Radio Logo"> -->
+      </a>
+
+      <ul class="cd-header-buttons">
+        <li><a class='btn__play fa fa-youtube-play'><span class="btn__play--text">live</span></a></li>
+        <li class="visible-xs-block">
+          <a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a>
+        </li>
+        <li class="hidden-xs">
+          <form class="search__container">
+            <a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a>
+            <input type="search" class="search__input" placeholder="ค้นหาข่าว...">
+          </form>
+        </li>
+        <li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
+      </ul> <!-- cd-header-buttons -->
+    </header>
+
+    <main class="cd-main-content main__container">
+      <!-- your content here -->
+      <div class="container">
+        <div class="row hidden-xs">
+          <div class="col-xs-12" style="height:30px"></div>
+        </div>
+        <div class="row">
+          <section class="col-sm-4 radio__container">
+            <header class="radio__header clearfix">
+              <img src="images/onair.png" alt="Now On air logo" class="radio__logo">
+              <hgroup class="radio__head"><h1 class="radio__h1">Nation Digital</h1><h2 class="radio__h2">live broadcast</h2></hgroup>
+            </header>
+            <main class="radio__main clearfix">
+              <div class="text-center">
+                <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <div class="text-center">
+                <p class="radio__text">------------------------</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 102 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <section class="prevclip__container">
+                <h2 class="prevclip__head">ฟังรายการย้อนหลัง</h2>
+                <ul id="previous-clip" class="prevclip__wrap">
+                  <li class="prevclip__item prevclip__item--1 active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item prevclip__item--2">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item prevclip__item--3">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                  <li class="prevclip__item prevclip__item--4">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">consectetur</span></li>
+                  <li class="prevclip__item prevclip__item--5">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">adipisicing elit</span></li>
+                  <li class="prevclip__item prevclip__item--6">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Culpa aspernatur</span></li>
+                  <li class="prevclip__item prevclip__item--7">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">aut harum</span></li>
+                  <li class="prevclip__item prevclip__item--8">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">id porro natus ea</span></li>
+                  <li class="prevclip__item active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                </ul>
+              </section>
+            </main>
+          </section>
+          <div class="col-sm-8 news__container">
+            <div class="col-sm-12"></div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row hidden-xs">
+          <div class="col-xs-12" style="height:30px"></div>
+        </div>
+        <div class="row">
+          <section class="col-sm-4 radio__container">
+            <header class="radio__header clearfix">
+              <img src="images/onair.png" alt="Now On air logo" class="radio__logo">
+              <hgroup class="radio__head"><h1 class="radio__h1">Nation Digital</h1><h2 class="radio__h2">live broadcast</h2></hgroup>
+            </header>
+            <main class="radio__main clearfix">
+              <div class="text-center">
+                <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <div class="text-center">
+                <p class="radio__text">------------------------</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 102 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <section class="prevclip__container">
+                <h2 class="prevclip__head">ฟังรายการย้อนหลัง</h2>
+                <ul id="previous-clip" class="prevclip__wrap">
+                  <li class="prevclip__item prevclip__item--1 active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item prevclip__item--2">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item prevclip__item--3">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                  <li class="prevclip__item prevclip__item--4">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">consectetur</span></li>
+                  <li class="prevclip__item prevclip__item--5">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">adipisicing elit</span></li>
+                  <li class="prevclip__item prevclip__item--6">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Culpa aspernatur</span></li>
+                  <li class="prevclip__item prevclip__item--7">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">aut harum</span></li>
+                  <li class="prevclip__item prevclip__item--8">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">id porro natus ea</span></li>
+                  <li class="prevclip__item active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                </ul>
+              </section>
+            </main>
+          </section>
+          <div class="col-sm-8 news__container">
+            <div class="col-sm-12"></div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer__container container-fluid">
+        <div class="row footer__wrap --top">
+          <div class="col-xs-12 col-sm-6">
+           <div class="footer__select">
+              <select id="month">
+                <option value="hide">เว็บไซต์ในเครือเนชั่น</option>
+                <option class="link" value="http://www.nationgroup.com">Nation Group</option>
+                <option class="link" value="http://www.nationmultimedia.com">เดอะ เนชั่น</option>
+                <option class="link" value="http://www.bangkokbiznews.com">กรุงเทพธุรกิจ</option>
+                <option class="link" value="http://www.komchadluek.net">คมชัดลึก</option>
+                <option class="link" value="http://www.nationweekend.com">เนชั่นสุดสัปดาห์</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="footer__wrap --link">
+              <a href="http://nationnewmedia.com/" class="content__text --link">SMS &amp; Application</a>
+              <span class="divided">|</span>
+              <a href="http://www.nationchannel.com/adrates" class="content__text --link">ติดต่อโฆษณา</a>
+              <span class="divided">|</span>
+              <a href="#" class="content__text --link">ร่วมงานกับเรา</a>          
+            </div>
+            <div class="footer__wrap --link">
+              <a href="#" class="content__text --link">เงื่อนไขความเป็นส่วนตัว</a>
+              <span class="divided">|</span>
+              <a href="#" class="content__text --link">นโยบายการใช้งาน</a>            
+            </div>
+          </div>
+        </div>
+        <div class="row footer__wrap --bottom">
+          <address class="col-xs-12 text-center footer__address content__text --primary">
+            <img src="http://assets.nationtv.tv/images/footer_nbc_logo.png" width="80" height="36" alt="NBC Logo">&copy; Copyright 2013 บริษัท เนชั่น บรอดแคสติ้ง คอร์ปอเรชั่น จำกัด (มหาชน)
+          </address>
+        </div>
+      </footer>
+    </main>
+
+    <div class="cd-overlay"></div>
+
+    <nav class="cd-nav">
+      <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+        <div class="logo__container --large text-center visible-xs-block">
+          <img src="images/logo-nation-radio-large.png" alt="Nation Radio Logo" class="logo --large">
+        </div>
+        <li class="has-children menu__item">
+          <a class="menu__link" href="#">ข่าว</a>
+          <ul class="cd-secondary-nav is-hidden">
+            <div role="tabpanel" class="">
+              <div class="nav nav-pills nav-stacked tab__container js-nav-desktop" role="tablist">
+                  <div role="presentation" class="active">
+                    <a class="submenu__link --sm" href="entertainment.html" data-target="#entertainment">บันเทิง</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="sport.html" data-target="#sport">กีฬา</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="international.html" data-target="#international">ต่างประเทศ</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="lifestyle.html" data-target="#lifestyle">ไลฟ์สไตล์</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="politics.html" data-target="#politics">การเมือง</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="crime.html" data-target="#crime">อาชญากรรม</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="social.html" data-target="#social">สังคม</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="economic-it.html" data-target="#economic-it">เศรษฐกิจไอที</a>
+                  </div>
+                  <div role="presentation">
+                    <a class="submenu__link --sm" href="columnist.html" data-target="#columnist">คอลัมนิสต์</a>
+                  </div>
+                </div>
+            
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="entertainment">
+                    <div>
+                      <figure class="submenu__item">
+                        <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                        <figcaption>
+                          <a href="" class="content__text --submenu submenu__caption">"อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                        </figcaption>
+                      </figure>
+                      <figure class="submenu__item">
+                        <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                        <figcaption>
+                          <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                        </figcaption>
+                      </figure>
+                      <figure class="submenu__item">
+                        <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                        <figcaption>
+                          <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                    <div role="tabpanel" class="tab-pane" id="sport">
+                      <div>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">บอลไทยเฉือนชนะเจ้าภาพได้สำเร็จ</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">นักกีฬาทีมชาติฟิตซ้อมอย่างหนัก</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เปิดฉากแล้ว ซีเกมส์ที่สิงโปร์</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="international">
+                      <div>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">ตปท "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="lifestyle">
+                      <div>
+                      <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">ไลฟ์สไตล์ "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="politics">
+                      <div>
+                      <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">politics "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="crime">
+                      <div>
+                      <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">อาชญากรรม "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="social">
+                      <div>
+                      <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">สังคม "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="economic-it">
+                      <div>
+                      <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">ไอที "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="columnist">
+                      <div>
+                      <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">คอลัมนิสต์ "อ่ำ อัมรินทร์ - จอย" ปิดฉากรัก 12 ปี</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">พืช ภาคิน เดอะว็อยซ์ ไปไม่เป็น คลิปเลือก คีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                        <figure class="submenu__item">
+                          <a href="#"><img src="http://placehold.it/210x130" alt=""></a>
+                          <figcaption>
+                            <a href="" class="content__text --submenu submenu__caption">เดอะว็อยซ์่เป็น คลิปเลือกคีย์เองว่อนเน็ต</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </ul>
+        </li>
+
+        <li class="menu__item"><a class="menu__link" href="#">ภาพ</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">วิดีโอ</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">รายการทีวี</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">breaking news</a></li>
+        <li class="social__wrap">
+          <a class="social__icon" href="//www.facebook.com/NationChannelTV" target="_blank">
+            <i class="fa fa-facebook-square social__icon --topbar"></i></a>
+          <a class="social__icon" href="//www.twitter.com/nationTV22" target="_blank">
+            <i class="fa fa-twitter-square social__icon --topbar"></i></a>
+          <a class="social__icon" href="//plus.google.com/113463480259329482237" target="_blank"> 
+            <i class="fa fa-google-plus-square social__icon --topbar"></i></a>
+          <a class="social__icon" href="//www.youtube.com/channel/UCIoFfVIOrRRbI-WVdDhTTwg" target="_blank">
+            <i class="fa fa-youtube-square social__icon --topbar"></i></a>
+          <a href="" class="fa fa-envelope subscribe__btn"><span class="subscribe__text">รับข่าวสารอีเมล</span></a>
+          <span class="[ hidden-xs ] menu__text">
+            <a class="submenu__head --small" href="#">สมัครสมาชิก</a><span class="devided">|</span><a class="submenu__head --small" href="#">เข้าสู่ระบบ</a>
+          </span>
+        </li>
+      </ul>
+      <ul id="cd-primary-nav" class="cd-primary-nav is-fixed visible-xs-block">
+        <li class="menu__header text-center">
+          <a class="submenu__head --small" href="#">สมัครสมาชิก</a><span class="devided">|</span><a class="submenu__head --small" href="#">เข้าสู่ระบบ</a>
+        </li>
+        <li class="menu__item has-children">
+          <a class="menu__link" href="http://codyhouse.co/?p=409">ข่าว</a>
+
+          <ul class="[ cd-secondary-nav is-hidden ][ submenu__container ]">
+            <li class="[ go-back ] [ menu__header text-center ]"><a class="submenu__head" href="#0">ข่าว</a></li>
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">บันเทิง</a>
+
+              <!-- <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=409">All Accessories</a></li>
+                <li class="has-children">
+                  <a href="#0">Beanies</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Accessories</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=409">All Benies</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Caps &amp; Hats</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Gifts</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Scarves &amp; Snoods</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#0">Caps &amp; Hats</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Accessories</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=409">All Caps &amp; Hats</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Beanies</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Caps</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Hats</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://codyhouse.co/?p=409">Glasses</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Gloves</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Jewellery</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Scarves</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Wallets</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Watches</a></li>
+              </ul> -->
+            </li>
+
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">กีฬา</a>
+
+              <!-- <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=409">All Bottoms</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Casual Trousers</a></li>
+                <li class="has-children">
+                  <a href="#0">Jeans</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Bottoms</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=409">All Jeans</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Ripped</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Skinny</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Slim</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Straight</a></li>
+                  </ul>
+                </li>
+                <li><a href="#0">Leggings</a></li>
+                <li><a href="#0">Shorts</a></li>
+              </ul> -->
+            </li>
+
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">ต่างประเทศ</a>
+
+              <!-- <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=409">All Jackets</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Blazers</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Bomber jackets</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Denim Jackets</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Duffle Coats</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Leather Jackets</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Parkas</a></li>
+              </ul> -->
+            </li>
+
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">ไลฟ์สไตล์</a>
+
+              <!-- <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=409">All Tops</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Cardigans</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Coats</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Hoodies &amp; Sweatshirts</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Jumpers</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Polo Shirts</a></li>
+                <li><a href="http://codyhouse.co/?p=409">Shirts</a></li>
+                <li class="has-children">
+                  <a href="#0">T-Shirts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Tops</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=409">All T-shirts</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Plain</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Print</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Striped</a></li>
+                    <li><a href="http://codyhouse.co/?p=409">Long sleeved</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://codyhouse.co/?p=409">Vests</a></li>
+              </ul> -->
+            </li>
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">อาชญากรรม</a>  
+            </li>
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">สังคม</a>
+            </li>
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">เศรษฐกิจ-ไอที</a>
+            </li>
+            <li class="[ has-children ] [ menu__item ]">
+              <a class="menu__link" href="http://codyhouse.co/?p=409">คอลัมนิสต์</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">ภาพ</a></li>
+        <li class="has-children menu__item">
+          <a class="menu__link" href="http://codyhouse.co/?p=409">วิดีโอ</a>
+
+          <ul class="cd-nav-gallery is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="http://codyhouse.co/?p=409">Browse Gallery</a></li>
+            <li>
+              <a class="cd-nav-item" href="http://codyhouse.co/?p=409">
+                <img src="img/img.jpg" alt="Product Image">
+                <h3>Product #1</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item" href="http://codyhouse.co/?p=409">
+                <img src="img/img.jpg" alt="Product Image">
+                <h3>Product #2</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item" href="http://codyhouse.co/?p=409">
+                <img src="img/img.jpg" alt="Product Image">
+                <h3>Product #3</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item" href="http://codyhouse.co/?p=409">
+                <img src="img/img.jpg" alt="Product Image">
+                <h3>Product #4</h3>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-children menu__item">
+          <a class="menu__link" href="http://codyhouse.co/?p=409">รายการทีวี</a>
+          <ul class="cd-nav-icons is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="http://codyhouse.co/?p=409">Browse Services</a></li>
+            <li>
+              <a class="cd-nav-item item-1" href="http://codyhouse.co/?p=409">
+                <h3>Service #1</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-2" href="http://codyhouse.co/?p=409">
+                <h3>Service #2</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-3" href="http://codyhouse.co/?p=409">
+                <h3>Service #3</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-4" href="http://codyhouse.co/?p=409">
+                <h3>Service #4</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-5" href="http://codyhouse.co/?p=409">
+                <h3>Service #5</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-6" href="http://codyhouse.co/?p=409">
+                <h3>Service #6</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-7" href="http://codyhouse.co/?p=409">
+                <h3>Service #7</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-nav-item item-8" href="http://codyhouse.co/?p=409">
+                <h3>Service #8</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu__item"><a class="menu__link" href="#">breaking news</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">LIVE TV</a></li>
+        <li class="social__group --sidemenu">
+          <div class="social__wrap --sidemenu">
+            <a href="" class="fa fa-envelope subscribe__btn"><span class="subscribe__text">รับข่าวสารอีเมล</span></a>
+            <a class="social__icon" href="//www.facebook.com/NationChannelTV" target="_blank">
+              <i class="fa fa-facebook-square social__icon --topbar"></i></a>
+            <a class="social__icon" href="//www.twitter.com/nationTV22" target="_blank">
+              <i class="fa fa-twitter-square social__icon --topbar"></i></a>
+            <a class="social__icon" href="//plus.google.com/113463480259329482237" target="_blank"> 
+              <i class="fa fa-google-plus-square social__icon --topbar"></i></a>
+            <a class="social__icon" href="//www.youtube.com/channel/UCIoFfVIOrRRbI-WVdDhTTwg" target="_blank">
+              <i class="fa fa-youtube-square social__icon --topbar"></i></a>
+          </div>
+        </li>
+      </ul> <!-- primary-nav -->
+    </nav> <!-- cd-nav -->
+
+    <div id="cd-search" class="cd-search search__container">
+      <form>
+        <input type="search" class="search__input" placeholder="ค้นหาข่าว...">
+      </form>
+    </div>
+  </div>
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <script src=""></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
+    <script src="bower_components/autosize/dest/autosize.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/navleft.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
+  <!--<script>
+      function init() {
+          window.addEventListener('scroll', function(e){
+              var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                  shrinkOn = 300,
+                  header = document.querySelector("header");
+              if (distanceY > shrinkOn) {
+                  classie.add(header,"smaller");
+              } else {
+                  if (classie.has(header,"smaller")) {
+                      classie.remove(header,"smaller");
+                  }
+              }
+          });
+      }
+      window.onload = init();
+  </script>-->
+</body>
+</html>

@@ -1,0 +1,190 @@
+//_________________ Input __________________
+
+.input-style(@bg; @color; @border) {
+  .checkborder(@border);
+	.bordercolor();
+	.checkbg(@bg);
+	.bgstyle();
+	.checkcolor(@color);
+	.colorstyle();
+}
+
+.button-outline(@bg; @color; @border-color; @border-width: 1px; @border-style: solid){
+  .checkborderstyle(@border-color; @border-width; @border-style);
+	.borderstyle();
+	.checkbg(@bg);
+	.bgstyle();
+	.checkcolor(@color);
+	.colorstyle();
+}
+
+.input-border(@border){
+  .checkborder(@border);
+	.bordercolor();
+}
+
+.input-bg(@bg){
+  .checkbg(@bg);
+	.bgstyle();
+}
+
+.input-color(@color){
+	.checkcolor(@color);
+	.colorstyle();
+}
+
+.input-radio-checkbox-color(@color, @el){
+	.checkcolorcontent(@color, @el);
+	.colorstylecontent();
+}
+
+	.checkborder(@border) {
+		.bordercolor() when (iscolor(@border)) {
+			border: 1px solid @border;
+			&:hover, &:focus, &:active, &.active, &:disabled, &.disabled {
+				border: 1px solid @border;
+			}
+		}
+		.bordercolor() when not (iscolor(@border)) {
+			border: 1px solid extract(@border,1);
+			&:hover {
+				border: 1px solid extract(@border, 2);
+			}
+			&:focus, &:active, &.active {
+				border: 1px solid extract(@border, 3);
+			}
+			&:disabled, &.disabled {
+				border: 1px solid extract(@border, 4);
+			}
+		}
+	}
+	.checkborderstyle(@border-color; @border-width; @border-style) {
+		.borderstyle() when (iscolor(@border-color)) {
+			border: @border-width @border-style @border-color;
+			&:hover, &:focus, &:active, &.active, &:disabled, &.disabled {
+				border: @border-width @border-style @border-color;
+			}
+		}
+		.borderstyle() when not (iscolor(@border-color)) {
+			border: @border-width @border-style extract(@border-color,1);
+			&:hover {
+				border: @border-width @border-style extract(@border-color, 2);
+			}
+			&:focus, &:active, &.active {
+				border: @border-width @border-style extract(@border-color, 3);
+			}
+			&:disabled, &.disabled {
+				border: @border-width @border-style extract(@border-color, 4);
+			}
+		}
+	}
+	.checkbg(@bg) {
+		.bgstyle() when (iscolor(@bg)) {
+			background-color: @bg;
+			&:hover, &:focus, &:active, &.active, &:disabled, &.disabled {
+				background-color: @bg;
+			}
+		}
+		.bgstyle() when not (iscolor(@bg)) {
+			background-color: extract(@bg,1);
+			&:hover {
+				background-color: extract(@bg,2);
+			}
+			&:focus, &:active, &.active {
+				background-color: extract(@bg,3);
+			}
+			&:disabled, &.disabled {
+				background-color: extract(@bg,4);
+			}
+		}
+	}
+	.checkcolor(@color) {
+		.colorstyle() when (iscolor(@color)) {
+			color: @color;
+			&:hover, &:focus, &:active, &.active, &:disabled, &.disabled {
+				color: @color;
+			}
+		}
+		.colorstyle() when not (iscolor(@color)) {
+			color: extract(@color,1);
+			&:hover {
+				color: extract(@color,2);
+			}
+			&:focus, &:active, &.active {
+				color: extract(@color,3);
+			}
+			&:disabled, &.disabled {
+				color: extract(@color,4);
+			}
+		}
+	}
+
+	.checkcolorcontent(@color, @el) {
+		.colorstylecontent() when (iscolor(@color)) {
+			color: @color;
+			&:hover:@{el}, &:focus:@{el}, &:active:@{el}, &.active:@{el}, &:disabled:@{el}, &.disabled:@{el} {
+				color: @color;
+			}
+		}
+		.colorstylecontent() when not (iscolor(@color)) {
+			color: extract(@color,1);
+			&:hover:@{el} {
+				color: extract(@color,2);
+			}
+			&:focus:@{el}, &:active:@{el}, &.active:@{el} {
+				color: extract(@color,3);
+			}
+			&:disabled:@{el}, &.disabled:@{el} {
+				color: extract(@color,4);
+			}
+		}
+	}
+
+.generate-color(@n, @row: 1, @lighten-percent: 4) when (@row =< @n) {
+  &--@{row} {
+    background-color: lighten(@orange-darkest, unit(@lighten-percent, %));
+  }
+  .generate-color(@n, (@row + 1), @lighten-percent + 4);
+}
+
+//__________________Icon____________________
+
+.icon-iconicon(@icon){
+	content: @icon;
+	display: inline-block;
+  font-family: "Ionicons", Tahoma, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-fontawesome(@icon) {
+	content: @icon;
+	display: inline-block;
+  font-family: "FontAwesome", Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-style(@font-size: 30px; @color: @icon-primary-color-theme){
+	font-size: @font-size;
+	color: extract(@color,1);
+	&:hover {
+		color: extract(@color,2);
+	}
+	&:focus, &:active, &.active {
+		color: extract(@color,3);
+	}
+	&:disable, &.disable {
+		color: extract(@color,4);
+	}
+}

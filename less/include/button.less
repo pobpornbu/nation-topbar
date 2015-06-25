@@ -1,0 +1,76 @@
+.button-typo(@font-size: 13px) {
+  font-family: @font-family-sans-serif;
+  font-weight: 400;
+  font-size: @font-size;
+}
+
+.button-size-normal {
+  padding: 6px 20px;
+}
+.button-size-icon {
+  padding: 6px 20px 6px 40px;
+}
+
+.component(button {
+  .button-typo;
+  .button-size-normal;
+  .round;
+  &:focus {
+    outline: none;
+    -webkit-appearance: none;
+  }
+  .option(solid-primary{
+    .input-style(@button-solid-primary-theme; @button-solid-font-color-theme; @button-solid-primary-theme);
+  });
+  .option(outline-primary {
+    .input-style(@button-outline-primary-bg-theme; @button-outline-primary-color-theme; @button-outline-primary-border-theme);
+  });
+  .option(outline-secondary {
+    .input-style(@button-outline-secondary-bg-theme; @button-outline-secondary-color-theme; @button-outline-secondary-border-theme);
+  });
+  .option(outline-favorite {
+    .input-style(@button-outline-favorite-bg-theme; @button-outline-favorite-color-theme; @button-outline-favorite-border-theme);
+  });
+  .option(icon {
+    padding: 6px 20px 6px 40px;
+    position: relative;
+    border: none;
+    &:before {
+      position: absolute;
+    }
+  });
+  .option(expand{
+    width: 100%;
+  });
+  .option(facebook {
+    color: rgb(255, 255, 255);
+    .input-bg(@button-facebook-bg-color-theme);
+    &:before {
+      font-size: 26px;
+      top: 2px;
+      left: 50%;
+      margin-left: -70px;
+    }
+  });
+  .option(play {
+    max-width: 490px; 
+    padding: 12px 20px 12px 40px;
+    .button-outline(@button-radio-bg-theme; @button-radio-color-theme; rgba(255,255,255,1); 2px);
+    // color: @blue-purple;
+    // background: @white;
+    margin-bottom: @gap-row;
+    .font-kanda(17px, 700);
+    &.js-play {
+      &:before {
+        .icon-fontawesome("\f04c");
+      }
+    }
+    &:before{
+      .icon-fontawesome("\f144");
+      // color: @blue-purple;
+      font-size: 20px;
+      top: 15px;
+      left: 20px;
+    }
+  });
+});

@@ -1,0 +1,56 @@
+// Tab
+// ------------------------------------------------------
+// <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
+//   <li role="presentation" class="active [ tab__head ]">
+//     <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="[ tab__link ]">Home</a>
+//   </li>
+//   <li role="presentation" class="[ tab__head ]">
+//     <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="[ tab__link ]">Profile</a>
+//   </li>
+//   <li role="presentation" class="[ tab__head ]">
+//     <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="[ tab__link ]">Messages</a>
+//   </li>
+//   <li role="presentation" class="[ tab__head ]">
+//     <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="[ tab__link ]">Settings</a>
+//   </li>
+// </ul>
+
+@tab-font-color-theme: rgb(232,234,235), rgb(255, 255, 255), rgb(255, 255, 255), rgb(188,192,196);
+
+.tab-no-style {
+  border: none;
+  .border-radius(0);
+  margin: 0;
+}
+
+.tab-selected {
+  border-bottom: 3px solid @color-hilight;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: @color-primary;
+  padding: 10px 15px 8px;
+}
+
+.component(tab {
+  .part(wrap {
+    .option(primary {
+      background: @color-primary;
+    });
+  });
+  .part(head {
+    &.active {
+      .tab__link {
+        .tab-selected !important;
+        color: @white;
+      }
+    }
+  });
+  .part(link {
+    .tab-no-style !important;
+    .input-color(@tab-font-color-theme);
+    &:hover {
+      .tab-selected !important;
+    }
+  });
+});

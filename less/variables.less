@@ -1,0 +1,189 @@
+@t-el-top 															: 		livestory-theme;
+
+//##Color
+
+@white  																: 		rgb(255, 255, 255);
+@transparent 														: 		rgba(255, 255, 255, 0);
+//Gray
+@black                                  :     rgb(0,0,0);
+@gray-step-1  													: 		rgb(26,34,45);
+@gray-step-2  													: 		rgb(34,45,58);
+@gray-step-3  													: 		rgb(56,66,77);
+@gray-step-4  													: 		rgb(78,87,97);
+@gray-step-5  													: 		rgb(122,129,137);  // color-secondary
+@gray-step-6  													: 		rgb(144,150,156);
+@gray-step-7  													: 		rgb(167,171,176);
+@gray-step-8  													: 		rgb(188,192,196);
+@gray-step-9  													: 		rgb(211,213,216);
+@gray-step-10 													: 		rgb(232,234,235);
+@gray-step-11 													: 		rgb(244,244,245);
+@gray-purple-light 											: 		rgb(245,247,255);
+
+//Green
+@green-step-1  													: 		rgb(11,139,124);
+@green-step-2  													: 		rgb(22,158,138);
+@green-step-3  													: 		rgb(37,168,156);
+@green-input-active  										: 		rgb(54,188,178);
+@green-step-5  													: 		rgb(82,210,202);   // color-primary
+@green-step-6  													: 		rgb(117,219,213);
+@green-step-7  													: 		rgb(145,226,221);
+
+
+//Red & Orange
+@red-step-1  						  							: 		rgb(210,11,2);
+@red-step-2  						  							: 		rgb(222,31,9);
+@red-step-3  						  							: 		rgb(223,66,32);
+@red-step-4  						  							: 		rgb(239,89,47);
+@red-step-5  						  							: 		rgb(245,125,72);
+@red-step-6  						  							: 		rgb(247,151,109);
+@red-step-7  						  							: 		rgb(249,172,130);
+
+@color-primary  												: 		@green-step-5;
+@color-secondary 												:   	@gray-step-5;
+@color-success  												: 		@color-primary;
+@color-error 														: 		@red-step-2;
+@color-hilight 												  : 		@red-step-5;
+
+@bg-primary  														: 		@gray-step-2;
+
+@border-primary 												: 		@gray-step-10;
+@border-input 		 											: 		rgb(211,213,216);
+
+//##COLOR STATE
+@normal 								                :    	@green-step-5;
+@hover 									                :    	@green-step-6;
+@active 								                :    	@green-input-active;
+@disabled 							                : 		@gray-step-8;
+
+//____________________Button Solid__________________
+
+// @state-color-theme-pattern: 'normal', 'hover', 'active/focus', 'disabled', 'error';
+
+//Primary theme color
+@button-solid-primary-theme: rgb(82,210,202),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+@button-primary    		 		              :    	@normal;
+@button-primary-hover 		              :    	@hover;
+@button-primary-active 		              :    	@active;
+@button-primary-disabled 	              :  		@disabled;
+@button-primary-error                   :  		@red-step-2;
+
+//Destructive theme color
+@button-solid-destructive-theme: rgb(222,31,9),rgb(223,66,32),rgb(210,11,2),rgb(188,192,196),rgb(222,31,9);
+@button-destructive-normal 				      			: 		@red-step-2;
+@button-destructive-hover 		         			 	:    	@red-step-3;
+@button-destructive-active 		        			  :    	@red-step-1;
+@button-destructive-disabled 		       			 	:    	@disabled;
+
+//Font Color theme color
+@button-solid-font-color-theme: rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(222,31,9);
+
+//___________________Button Outline_________________
+// Primary theme color
+@button-outline-primary-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(54,188,178), rgb(232,234,235), rgb(222,31,9);
+@button-outline-primary-color-theme: rgb(82,210,202),rgb(117,219,213), rgb(255, 255, 255), rgb(188,192,196), rgb(222,31,9);
+@button-outline-primary-border-theme: rgb(82,210,202), rgb(117,219,213), rgb(54,188,178), rgb(188,192,196), rgb(222,31,9);
+
+// Secondary theme color
+@button-outline-secondary-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(54,188,178), rgb(232,234,235), rgb(222,31,9);
+@button-outline-secondary-color-theme: rgb(122,129,137),rgb(117,219,213), rgb(255, 255, 255), rgb(188,192,196), rgb(222,31,9);
+@button-outline-secondary-border-theme: rgb(122,129,137),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+
+@button-outline-favorite-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgb(245,125,72), rgb(232,234,235), rgb(222,31,9);
+@button-outline-favorite-color-theme: rgb(255, 255, 255),rgb(247,151,109), rgb(255, 255, 255), rgb(188,192,196), rgb(222,31,9);
+@button-outline-favorite-border-theme: rgb(255, 255, 255),rgb(247,151,109),rgb(245,125,72),rgb(188,192,196),rgb(222,31,9);
+
+@button-secondary 		       						:    	@gray-step-5;
+@button-secondary-hover 		            :    	@hover;
+@button-secondary-active 		            :    	@active;
+@button-secondary-disabled 		          :    	@gray-step-10;
+@button-secondary-disabled-border       :  		@gray-step-8;
+
+//Font Color theme color
+@button-outline-font-color-theme: rgb(122,129,137),rgb(117,219,213),rgb(255, 255, 255),rgb(188,192,196),rgb(222,31,9);
+//Input
+@input-box-normal 			                :    	@normal;
+@input-box-hover 			                  :    	@hover;
+@input-box-active 			                :    	@active;
+@input-box-disabled		                  :  		@disabled;
+@input-box-error 	                      :  		@red-step-2;
+
+@favorite-primary-color-theme: rgb(255, 255, 255),rgb(247,151,109),rgb(245,125,72),rgb(188,192,196),rgb(222,31,9);
+@favorite-secondary-color-theme: rgb(188,192,196),rgb(247,151,109),rgb(245,125,72),rgb(188,192,196),rgb(222,31,9);
+
+@favorite-header-bg-color-theme: rgb(144,150,156), rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+@favorite-header-color-theme: rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(188,192,196), rgb(222,31,9);
+
+//___________________Icon___________________
+
+@icon-primary-color-theme: rgb(188,192,196),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+@icon-secondary-color-theme: rgb(255, 255, 255),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+
+//___________________Input___________________
+
+@input-primary-bg-color-theme: rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(232,234,235),rgb(255, 255, 255);
+@input-primary-border-color-theme: rgb(211,213,216),rgb(82,210,202),rgb(54,188,178),rgb(222,31,9),rgb(188,192,196);
+@input-primary-font-color-theme: rgb(167,171,176),rgb(167,171,176),rgb(34,45,58),rgb(188,192,196),rgb(34,45,58);
+
+// Search input -----------------------------
+
+@input-search-border-color-theme: rgb(211,213,216),rgb(82,210,202),rgb(54,188,178),rgb(222,31,9),rgb(188,192,196);
+
+// Radio button -----------------------------
+
+@input-radio-color-theme: rgb(122,129,137),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
+@input-dropdown-color-theme: rgba(255,255,255,0),rgb(211,213,216),rgb(54,188,178),rgba(255,255,255,0),rgb(222,31,9);
+
+//##Social
+//Facebook
+@button-facebook-bg-color-theme: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
+
+//Twitter
+@button-twitter-bg-color-theme: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
+
+//Google +
+@google-normal 	    										:     rgb(222,77,56);
+@google-hover 	    										:     rgb(247,91,75);
+@google-active 	    										:     rgb(206,59,44);
+@google-disabled 	  										:     @disabled;
+
+@button-googleplus-bg-color-theme: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
+
+//Modal color base
+@modal-black-background 								: 		fade(@gray-step-1, 70%);
+@modal-white-background 								: 		fade(@gray-step-11, 95%);
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif 								:     Tahoma, Arial, sans-serif;
+@font-family-kandapro      							:     'psl_kanda';
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace  								:     Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base       								:     @font-family-sans-serif;
+
+//Font-size Unit Point reference from UI-Kit
+@font-size-base         								:     14px;
+
+@font-size-h1           								:     ceil((@font-size-base * 2.85)); //40px; //60pt
+@font-size-h2           								:     ceil((@font-size-base * 2.14)); //30px;
+@font-size-h3           								:     ceil((@font-size-base * 1.42)); //20px; //30pt
+@font-size-h4           								:     ceil((@font-size-base * 1.14)); //16px; //24pt
+@font-size-h5           								:     @font-size-base;
+@font-size-h6           								:     ceil((@font-size-base * 0.9)); //12px; //18pt
+
+@font-color-base 												: 		@gray-step-2;
+@font-color-secondary 									:     @gray-step-5;
+@font-color-paceholder 									:     @gray-step-7;
+
+//## Z-index
+@zindex-topbar 													: 		1;
+@zindex-topbar-bottom 									: 		5;
+@zindex-topbar-top 											: 		10;
+
+@profile-picture-size 									: 		120px;
+@profile-picture-bg-size 								: 		6px;
+@profile-picture-top-pos 								: 		50px;
+
+@comment-picture-size  									: 		50px;

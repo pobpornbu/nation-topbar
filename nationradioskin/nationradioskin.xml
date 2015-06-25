@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+	<skin author="JW Player" name="Nationradioskin" target="6.7" version="3.0">
+
+	<components>
+
+		<component name="controlbar">
+			<!-- <settings>
+				<setting name="margin" value="0"/>
+				<setting name="maxwidth" value="9999"/>
+				<setting name="fontsize" value="11"/>
+				<setting name="fontweight" value="normal"/>
+				<setting name="fontcase" value="normal"/>
+				<setting name="fontcolor" value="0x000000"/>
+			</settings> -->
+			
+			<elements>
+				<element name="background" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAYAAADtlXTHAAAAEUlEQVR42mP88ePHM8bBRgAAf1ByQ4fOm1gAAAAASUVORK5CYII="/>
+				<!-- <element name="capLeft" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAeCAYAAAAVdY8wAAAAG0lEQVR42mP48ePHM2Iww6jCUYWjCkcVDmaFANH0daXk6ub1AAAAAElFTkSuQmCC"/> -->
+				<!-- <element name="capRight" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAeCAYAAAAVdY8wAAAAG0lEQVR42mP48ePHM2Iww6jCUYWjCkcVDmaFANH0daXk6ub1AAAAAElFTkSuQmCC"/> -->
+				
+				<!-- <element name="playButton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAAaUlEQVR42u3VwQkAIQxE0RSkba4FWWA2yF4EEUczB9kE5vofeFFUVZiTAAK4FLB7bEnAQ4D6DYJ2AAg6AZYgD2AKeQJDiAF0EBMotswAWpjxRF3YExiGPYBp+ARYCu8AUBgG4sMJ4GfAC2j4Yr2KpEa1AAAAAElFTkSuQmCC"/>
+				<element name="playButtonOver" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAAZklEQVR42u3VMQoAIQxE0dxMb77eLAaxEUQczRSLCUz7H9goqirMSQAB/BSw+2xJwEMA7YOgEwCCboAtyANYQp7AFGIAA8QEii0zgBZmPNEQ9gSmYQ9gGb4BtsInABSGgfhwAngMqLCef9XYX1MQAAAAAElFTkSuQmCC"/>
+				<element name="pauseButton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAAMklEQVR42mP4//8/Ay0xw6gFoxYMYQuAYDMaRgco8qMWjFowasGoBaMWjFY4oxaMcAsAawHAM0cJmtQAAAAASUVORK5CYII="/>
+				<element name="pauseButtonOver" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAAMUlEQVR42u3VIQ4AAAjDwP7/00ODRxC6ZGri5EjCZhEQOAwAGZ1pu4CAgICAhyPwHCg+9OFzZSk8ZQAAAABJRU5ErkJggg=="/>
+				<element name="prevButton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAAAUUlEQVR42mP4//8/AzUww6hBowaNHIOAYDMDbqADxG2UGAQ2ACq3mRyDUAwgxyCsBpBjkC4Qt1PDIBjAaiAlgY1iIDWiH2zgaF4bNWjUIJIwALkWksgZiPPUAAAAAElFTkSuQmCC"/>
+				<element name="prevButtonOver" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAAAUUlEQVR42mP4//8/AzUww6hBowaNHIOAAEzgAPZAvJ8Sg8AGQOX+k2MQigHkGITVAHIMcgDiA9QwCAawGkhJYKMYSI3oBxs4mtdGDRo1iCQMAD7DnqgrnEXrAAAAAElFTkSuQmCC"/>
+				<element name="nextButton" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAAAUElEQVR42u3TQQoAIAhEUQ9U16wDeUBzURCBkNquGfjbBy4kEaEXESBAf0C6phWyx7cQzyzQDVlgGDrBNNS1moEWED7tBNyQBfgg/BogQHsDXbiSyKTI5ioAAAAASUVORK5CYII="/>
+				<element name="nextButtonOver" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAAATklEQVR42u3TQQoAIAhEUW9WN6+bTS4KIhBS2zUDf/vAhQJAXiSECP0B6ZpWxB5uIcws0A1ZYBg6wTTUtZqBFhA+7QTckAX4IP4aIUJ7A1ClnqiWCT5/AAAAAElFTkSuQmCC"/> -->
+				
+				
+				<element name="muteButton" src="muteButton.png"/>
+				<element name="muteButtonOver" src="muteButtonOver.png"/>
+				<element name="unmuteButton" src="unmuteButton.png"/>
+				<element name="unmuteButtonOver" src="unmuteButtonOver.png"/>
+				
+				<element name="volumeCapLeft" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAeCAYAAAAPSW++AAAAFklEQVR42mP8//8/AzbAOCoxKjHcJAA3uVnFd64sVwAAAABJRU5ErkJggg=="/>
+				<element name="volumeRail" src="volumeRail.png"/>
+				<element name="volumeProgress" src="volumeProgress.png"/>
+				<element name="volumeProgressCapRight" src="volumeProgressCapRight.png"/>
+			</elements>
+		</component>
+
+  </components>
+</skin>
