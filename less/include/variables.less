@@ -5,6 +5,8 @@
 
 @color-brand-primary										: 								rgb(47, 69, 144);
 @color-brand-secondary 									: 								rgb(204, 204, 204);
+@brand-primary                    :                 rgb(47, 69, 144);
+@brand-secondary                  :                 rgb(204, 204, 204);
 
 @blue-dark 															: 								rgb(34, 50, 102);
 @blue-medium 														: 								rgb(36, 54, 134);
@@ -43,3 +45,175 @@
 @zindex-search-icon 										: 								1001;
 @zindex-search 													: 								1000;
 @zindex-topbar 													: 								 999;
+// Path
+@image-path                             :                 "../images-v3";
+
+// Color
+@transparent                            :                 rgba(255, 255, 255, 0);
+@white                                  :                 rgba(255, 255, 255, 1);
+@black                                  :                 rgb(3, 3, 3);
+
+@brand-primary                          :                 rgb(47, 69, 144);
+@brand-secondary                        :                 rgb(204, 204, 204);
+
+@darkest-blue                           :                 darken(@brand-primary, 30%);  // rgb(9, 14, 29)
+@darker-blue                            :                 darken(@brand-primary, 20%);  // rgb(22, 32, 67)
+@dark-blue                              :                 darken(@brand-primary, 10%);  // rgb(34, 51, 106)
+
+@light-blue                             :                 lighten(@brand-primary, 10%); // rgb(60, 87, 182)
+@lighter-blue                           :                 lighten(@brand-primary, 20%); // rgb(91, 116, 202)
+@ultra-light-blue                       :                 lighten(@brand-primary, 30%); // rgb(130, 149, 214)
+@ultra-light-blue-2                     :                 lighten(@brand-primary, 40%); // rgb(168, 182, 227)
+@ultra-light-blue-3                     :                 lighten(@brand-primary, 50%); // rgb(207, 214, 239)
+@ultra-light-blue-4                     :                 lighten(@brand-primary, 55%); // rgb(245, 247, 252)
+@ultra-light-blue-5                     :                 lighten(@brand-primary, 57%); // rgb(234, 237, 248)
+@ultra-light-blue-6                     :                 lighten(@brand-primary, 60%); // rgb(245, 247, 252)
+
+@gray-darkest                           :                 rgb(51, 51, 51);
+@gray-darker                            :                 rgb(102, 102, 102);
+@gray-dark                              :                 rgb(153, 153, 153);
+@gray                                   :                 rgb(187, 187, 187);
+@gray-light                             :                 rgb(204, 204, 204);
+@gray-lighter                           :                 rgb(238, 238, 238);
+@disable                                :                 @gray;
+
+@gray-purple-light                      :                 rgb(245,247,255);
+
+@color-border-primary                   :                 rgb(47,69,143);
+
+@color-font-normal                      :                 rgba(255,255,255,0.5);
+
+@color-icon-social                      :                 rgba(247,247,247,0.5);
+
+@input-disabled                         :                 rgb(247,91,75);
+
+@orange-step-1                          :                 rgb(254, 249, 236);
+@orange-step-2                          :                 rgb(254, 247, 231);
+@orange-darkest                         :                 rgb(249, 192, 70);
+
+@red                                    :                 rgb(255, 0, 0);
+@dark-yellow                            :                 rgb(248, 177, 25);
+
+// Live
+@live                                   :                 rgb(246, 179, 0);
+@live-hover                             :                 lighten(@live, 15%);
+@live-active                            :                 darken(@live, 10%);
+
+@advertorial                            :                 rgb(246, 179, 0);
+
+@color-breaking-news                    :                 @live;
+
+@entertainment                          :                 rgb(0, 204, 255);
+@sport                                  :                 rgb(0, 120, 255);
+@lifestyle                              :                 rgb(0, 0, 255);
+@economy-business                       :                 rgb(120, 0, 255);
+@politics                               :                 rgb(255, 0, 192);
+@crime                                  :                 rgb(255, 102, 0);
+@foreign                                :                 rgb(255, 192, 0);
+@social                                 :                 rgb(194, 213, 38);
+@tvprogram                              :                 @brand-primary;
+@topstory                               :                 @brand-primary;
+@mostlist                               :                 @brand-primary;
+@hotnews                                :                 @brand-primary;
+@recommended                            :                 @dark-blue;
+@canonlife                              :                 rgb(233, 31, 46);
+
+@pagination                             :                 @ultra-light-blue-5;
+@pagination-last-page                   :                 @ultra-light-blue-3;
+
+
+//___________________Font____________________
+
+@font-family-sans-serif                 :                 Arial, Tahoma, sans-serif;
+
+@line-height-sm                         :                 1.3333333333;
+@line-height-md                         :                 1.5;
+
+//___________________ Box Logo ______________
+@box-size-logo                          :                 120px;
+
+//___________________Input___________________
+
+@screen-xs-max                          :                 767px;
+@screen-sm-min                          :                 768px;
+@screen-sm-max                          :                 991px;
+@screen-md-min                          :                 992px;
+
+@gap-row                                :                 30px;
+@gap-element                            :                 15px;
+
+//___________________Input___________________
+
+@input-primary-bg-theme: @white, @white, @white, @gray-lighter, @white;
+@input-primary-color-theme: @gray-dark, @gray-dark, @gray-darkest, @gray-darkest, @gray;
+@input-primary-border-theme: @gray-lighter, @color-border-primary, @color-border-primary, @input-disabled, @gray;
+
+@button-outline-primary-bg-theme: @transparent, @transparent, @brand-primary, @gray-lighter;
+@button-outline-primary-color-theme: @brand-primary, lighten(@brand-primary, 20%), @white, @gray;
+@button-outline-primary-border-theme: @brand-primary, lighten(@brand-primary, 20%), @brand-primary, @gray;
+
+@button-outline-secondary-bg-theme: @ultra-light-blue-5, @ultra-light-blue-5, @brand-primary, @gray-lighter;
+
+@button-outline-canonlife-bg-theme: @transparent, @transparent, @canonlife, @gray-lighter;
+@button-outline-canonlife-color-theme: @canonlife, lighten(@canonlife, 20%), @white, @gray;
+@button-outline-canonlife-border-theme: @canonlife, lighten(@canonlife, 20%), @canonlife, @gray;
+
+@button-primary-color-theme       : @brand-primary  , lighten(@brand-primary, 15%), darken(@brand-primary, 10%), @brand-secondary;
+@button-secondary-color-theme     : @brand-secondary, lighten(@brand-secondary, 15%), darken(@brand-secondary, 10%), @brand-secondary;
+
+@category : @entertainment, @sport, @lifestyle, @economy-business, @politics, @crime, @foreign, @social, @live, @topstory, @tvprogram, @mostlist, @hotnews, @recommended, @canonlife, @brand-primary;
+@category-title : entertainment, sport, lifestyle, economy-business, politics, crime, foreign, social, live, topstory, tvprogram, mostlist, hotnews, recommended, canonlife, primary;
+
+@button-canonlife-color-theme         : @canonlife      , lighten(@canonlife, 15%), darken(@canonlife, 10%), @brand-secondary;
+@button-entertainment-color-theme     : @entertainment  , lighten(@entertainment, 15%), darken(@entertainment, 10%), @brand-secondary;
+@button-sport-color-theme             : @sport          , lighten(@sport, 15%), darken(@sport, 10%), @brand-secondary;
+@button-lifestyle-color-theme         : @lifestyle      , lighten(@lifestyle, 15%), darken(@lifestyle, 10%), @brand-secondary;
+@button-economy-business-color-theme  : @economy-business    , lighten(@economy-business, 15%), darken(@economy-business, 10%), @brand-secondary;
+@button-politics-color-theme          : @politics       , lighten(@politics, 15%), darken(@politics, 10%), @brand-secondary;
+@button-crime-color-theme             : @crime          , lighten(@crime, 15%), darken(@crime, 10%), @brand-secondary;
+@button-foreign-color-theme           : @foreign        , lighten(@foreign, 15%), darken(@foreign, 10%), @brand-secondary;
+@button-social-color-theme            : @social         , lighten(@social, 15%), darken(@social, 10%), @brand-secondary;
+
+@button-radio-bg-theme: rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5);
+@button-radio-color-theme: rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(47, 69, 144, 0.7);
+
+@select-bg-theme: fade(@white, 20%), fade(@white,50%), fade(@white,50%);
+
+@select-outline-primary-border-theme: @gray,        @brand-primary, @brand-primary, @gray;
+@select-outline-primary-bg-theme:     @white,       @white,         @white,         @gray-lighter;
+@select-outline-primary-color-theme:  @gray-darker, @gray-darker,   @gray-darker,   @gray;
+
+@adjustfont-bg-theme: @white, @white, @brand-primary, @gray-lighter;
+@adjustfont-color-theme: @gray-darker, @brand-primary, @white, @disable;
+@adjustfont-border-theme: @gray-darker, @brand-primary, @brand-primary, @disable;
+
+@prevnext-bg-theme : @white, @ultra-light-blue-5, @brand-primary, @disable;
+@prevnext-color-theme : @brand-primary, @brand-primary, @white, @gray-lighter;
+
+//___________________Social___________________
+
+//Facebook
+@button-facebook-bg-color-theme: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
+
+//Twitter
+@button-twitter-bg-color-theme: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
+
+//Google Plus
+@button-googleplus-bg-color-theme: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
+
+//___________________Zindex___________________
+
+@zindex-overlay                         :                 1500;
+@zindex-search-icon                     :                 1001;
+@zindex-logo-small                      :                 1001;
+@zindex-search                          :                 1000;
+@zindex-topbar                          :                  999;
+
+//use .zindex('@var-string');
+@z-index-order                          :   'overlay','list-items-breakingnews', 'head-breakingnews','2','3','4','5','6','7','8','9','10'; // var * 10
+
+//___________________ Breakingnews____________
+@set-height-box-breakingnews            :                 30px;
+
+//___________________ Ads Tower ______________
+@margin-LR : -620px;

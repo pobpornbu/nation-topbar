@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Nation Radio</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navleft.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <meta name="google-site-verification" content="">
+
+  <!-- app icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="frontend/images/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="frontend/images/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="frontend/images/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="frontend/images/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="frontend/images/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="frontend/images/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="frontend/images/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="frontend/images/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="frontend/images/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="frontend/images/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="frontend/images/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="frontend/images/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="frontend/images/ico/favicon-16x16.png">
+  <link rel="manifest" href="frontend/images/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="frontend/images/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Authorship and Publisher Markup -->
+  <link rel="publisher" href="">
+  <link rel="author" href="">
+
+  <!-- Open Graph data (facebook) -->
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="article:tag" content="">
+  <meta property="fb:app_id" content="">
+  <meta property="fb:admins" content="">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+  <link rel="image_src" type="image/jpeg" href="">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:image:src" content="">
+</head>
+<body id="nation-radio-theme" class="nav-on-left" ng-app="NationRadio">
+  <div id="nation-nav-theme">
+    <header class="cd-main-header">
+      <a class="cd-logo logo__container --small" href="index.html">
+        <!-- <img src="images/logo-nation-radio-small.png" alt="Nation Radio Logo"> -->
+      </a>
+
+      <ul class="cd-header-buttons">
+        <li><a class='btn__play fa fa-youtube-play'><span class="btn__play--text">live</span></a></li>
+        <li class="visible-xs-block">
+          <a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a>
+        </li>
+        <li class="hidden-xs">
+          <form class="search__container">
+            <a class="cd-search-trigger search__icon" href="#cd-search"><span></span></a>
+            <input type="search" class="search__input" placeholder="ค้นหาข่าว...">
+          </form>
+        </li>
+        <li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
+      </ul> <!-- cd-header-buttons -->
+    </header>
+
+    <main class="cd-main-content main__container">
+      <!-- your content here -->
+      <div class="container">
+        <div class="row hidden-xs">
+          <div class="col-xs-12" style="height:30px"></div>
+        </div>
+        <div class="row">
+          <section class="col-sm-4 radio__container">
+            <header class="radio__header clearfix">
+              <img src="images/onair.png" alt="Now On air logo" class="radio__logo">
+              <hgroup class="radio__head"><h1 class="radio__h1">Nation Digital</h1><h2 class="radio__h2">live broadcast</h2></hgroup>
+            </header>
+            <main class="radio__main clearfix">
+              <div class="text-center">
+                <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <div class="text-center">
+                <p class="radio__text">------------------------</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 102 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <section class="prevclip__container">
+                <h2 class="prevclip__head">ฟังรายการย้อนหลัง</h2>
+                <ul id="previous-clip" class="prevclip__wrap">
+                  <li class="prevclip__item prevclip__item--1 active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item prevclip__item--2">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item prevclip__item--3">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                  <li class="prevclip__item prevclip__item--4">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">consectetur</span></li>
+                  <li class="prevclip__item prevclip__item--5">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">adipisicing elit</span></li>
+                  <li class="prevclip__item prevclip__item--6">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Culpa aspernatur</span></li>
+                  <li class="prevclip__item prevclip__item--7">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">aut harum</span></li>
+                  <li class="prevclip__item prevclip__item--8">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">id porro natus ea</span></li>
+                  <li class="prevclip__item active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                </ul>
+              </section>
+            </main>
+          </section>
+          <div class="col-sm-8 news__container">
+            <div class="col-sm-12"></div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row hidden-xs">
+          <div class="col-xs-12" style="height:30px"></div>
+        </div>
+        <div class="row">
+          <section class="col-sm-4 radio__container">
+            <header class="radio__header clearfix">
+              <img src="images/onair.png" alt="Now On air logo" class="radio__logo">
+              <hgroup class="radio__head"><h1 class="radio__h1">Nation Digital</h1><h2 class="radio__h2">live broadcast</h2></hgroup>
+            </header>
+            <main class="radio__main clearfix">
+              <div class="text-center">
+                <p class="radio__text"><time datetime="2015-06-10 8:00-9:30">08:00 - 09:30</time> เก็บตกจากเนชั่น</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 90.5 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <div class="text-center">
+                <p class="radio__text">------------------------</p>
+                <button class="button --icon --play --expand fa-play-circle">FM 102 <span class="hidden-sm">MHz</span></button>
+              </div>
+              <section class="prevclip__container">
+                <h2 class="prevclip__head">ฟังรายการย้อนหลัง</h2>
+                <ul id="previous-clip" class="prevclip__wrap">
+                  <li class="prevclip__item prevclip__item--1 active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item prevclip__item--2">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item prevclip__item--3">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                  <li class="prevclip__item prevclip__item--4">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">consectetur</span></li>
+                  <li class="prevclip__item prevclip__item--5">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">adipisicing elit</span></li>
+                  <li class="prevclip__item prevclip__item--6">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Culpa aspernatur</span></li>
+                  <li class="prevclip__item prevclip__item--7">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">aut harum</span></li>
+                  <li class="prevclip__item prevclip__item--8">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">id porro natus ea</span></li>
+                  <li class="prevclip__item active">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Ipsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">Loremsum</span></li>
+                  <li class="prevclip__item">
+                    <i class="prevclip__icon fa fa-play-circle"></i><span class="prevclip__text">dolor sit amet</span></li>
+                </ul>
+              </section>
+            </main>
+          </section>
+          <div class="col-sm-8 news__container">
+            <div class="col-sm-12"></div>
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer__container container-fluid">
+        <div class="row footer__wrap --top">
+          <div class="col-xs-12 col-sm-6">
+           <div class="footer__select">
+              <select id="month">
+                <option value="hide">เว็บไซต์ในเครือเนชั่น</option>
+                <option class="link" value="http://www.nationgroup.com">Nation Group</option>
+                <option class="link" value="http://www.nationmultimedia.com">เดอะ เนชั่น</option>
+                <option class="link" value="http://www.bangkokbiznews.com">กรุงเทพธุรกิจ</option>
+                <option class="link" value="http://www.komchadluek.net">คมชัดลึก</option>
+                <option class="link" value="http://www.nationweekend.com">เนชั่นสุดสัปดาห์</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="footer__wrap --link">
+              <a href="http://nationnewmedia.com/" class="content__text --link">SMS &amp; Application</a>
+              <span class="divided">|</span>
+              <a href="http://www.nationchannel.com/adrates" class="content__text --link">ติดต่อโฆษณา</a>
+              <span class="divided">|</span>
+              <a href="#" class="content__text --link">ร่วมงานกับเรา</a>
+            </div>
+            <div class="footer__wrap --link">
+              <a href="#" class="content__text --link">เงื่อนไขความเป็นส่วนตัว</a>
+              <span class="divided">|</span>
+              <a href="#" class="content__text --link">นโยบายการใช้งาน</a>
+            </div>
+          </div>
+        </div>
+        <div class="row footer__wrap --bottom">
+          <address class="col-xs-12 text-center footer__address content__text --primary">
+            <img src="http://assets.nationtv.tv/images/footer_nbc_logo.png" width="80" height="36" alt="NBC Logo">&copy; Copyright 2013 บริษัท เนชั่น บรอดแคสติ้ง คอร์ปอเรชั่น จำกัด (มหาชน)
+          </address>
+        </div>
+      </footer>
+    </main>
+
+    <div class="cd-overlay"></div>
+
+    <nav class="cd-nav">
+  <!-- desktop menu -->
+  <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+    <li class="submenu__head menu__header menu__register text-center">
+      <span class="hidden"><a class="submenu__text" href="#">สมัครสมาชิก</a><span class="divided">|</span><a class="submenu__text" href="#">เข้าสู่ระบบ</a></span>
+    </li>
+    <li class="menu__item visible-xs-block">
+      <a href="http://www.nationtv.tv/main" class="menu__link">หน้าหลัก</a>
+    </li>
+    <li class="menu__item has-children gap-sm-inner-left">
+      <h2 class="no-head-style js-is-submenu"><a class="menu__link " href="http://www.nationtv.tv/main/content/topstory/">ข่าว</a></h2>
+      <ul class="cd-secondary-nav is-hidden">
+        <li class="[ go-back ] [ menu__header text-center ]"><a class="submenu__head" href="javascript:void(0);">ข่าว</a></li>
+        <li role="tabpanel" class="tab__container">
+          <div class="js-tab-list js-nav-scroll-news scroll submenu__container --news" role="tablist">
+            <div class="menu__item visible-xs-block">
+              <a href="http://www.nationtv.tv/main/content/topstory/" class="menu__link">ข่าววันนี้</a>
+            </div>
+
+
+
+
+
+
+                <div role="presentation" class="active">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/mostview/" data-target="#mostview">ข่าวผู้อ่านสูงสุด</a></h3>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/entertainment/" data-target="#entertainment">บันเทิง</a></h3>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/sport/" data-target="#sport">กีฬา</a></h3>
+                </div>
+
+
+
+
+
+
+                <div role="presentation" class="has-children">
+                  <h3 class="no-head-style js-is-submenu"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/lifestyle/" data-target="#lifestyle">ไลฟ์สไตล์</a></h3>
+                  <ul id="" class="is-hidden submenu__container cd-tertiary-nav">
+                    <li class="[ go-back ] [ menu__header text-center ]"><a class="submenu__head" href="javascript:void(0)">ไลฟ์สไตล์</a></li>
+                    <li><a class="menu__link visible-xs-block" href="http://www.nationtv.tv/main/content/lifestyle/">ทั้งหมด</a></li>
+                                          <li><h4 class="no-head-style"><a class="menu__link" href="http://www.nationtv.tv/main/content/lifestyle/?type=1">กิน</a></h4></li>
+                                          <li><h4 class="no-head-style"><a class="menu__link" href="http://www.nationtv.tv/main/content/lifestyle/?type=2">เที่ยว</a></h4></li>
+
+                  </ul>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/economy-business/" data-target="#economy-business">เศรษฐกิจ - ไอที</a></h3>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/politics/" data-target="#politics">การเมือง</a></h3>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/crime/" data-target="#crime">อาชญากรรม</a></h3>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/foreign/" data-target="#foreign">ต่างประเทศ</a></h3>
+                </div>
+
+
+
+
+
+
+
+
+                <div role="presentation" class="">
+                  <h3 class="no-head-style"><a class="menu__link js-tab-control" href="http://www.nationtv.tv/main/content/social/" data-target="#social">สังคม</a></h3>
+                </div>
+
+
+
+
+          </div>
+
+
+          <div class="js-tab-pane-wrap tab-pane-wrap subcategory__wrap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div role="tabpanel" class="js-tab-pane tab-pane" id="lifestyle">
+                  <div class="row">
+                    <div class="js-tab-list subcategory--lifestyle" role="tablist">
+                        <h4 class="no-head-style"><strong class="menu__head">หมวดหมู่ย่อย</strong></h4>
+
+                                              <div class="active">
+                          <a class="menu__link --tertiary js-tab-control" href="http://www.nationtv.tv/main/content/lifestyle/?type=1" data-target="#lifestyle1">กิน</a>
+                        </div>
+                                              <div class="">
+                          <a class="menu__link --tertiary js-tab-control" href="http://www.nationtv.tv/main/content/lifestyle/?type=2" data-target="#lifestyle2">เที่ยว</a>
+                        </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+        </li>
+      </ul>
+    </li>
+
+
+    <!-- Gallery Menu -->
+    <li class="menu__item has-children">
+      <h2 class="no-head-style js-is-submenu"><a class="menu__link " href="http://www.nationtv.tv/main/gallery/">ภาพ</a></h2>
+      <ul class="cd-secondary-nav is-hidden">
+        <li class="[ go-back ] [ menu__header text-center ]"><a class="submenu__head" href="javascript:void(0);">ภาพ</a></li>
+        <li role="tabpanel" class="tab__container">
+          <div class="js-nav-scroll-gallery scroll submenu__container --photo">
+            <div class="menu__item visible-xs-block">
+              <a href="http://www.nationtv.tv/main/gallery/" class="menu__link">หน้าหลัก</a>
+            </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/sport/">
+                    กีฬา/สันทนาการ
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/celebrity/">
+                    คนดัง
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/fashion/">
+                    ความงาม/แฟชั่น
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/travel/">
+                    สถานที่ท่องเที่ยว
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/natural/">
+                    ธรรมชาติ
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/news/">
+                    บทความข่าว
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/person/">
+                    บุคคล
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/art/">
+                    ศิลปะ
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/animal/">
+                    สัตว์/สัตว์ป่า
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/food/">
+                    อาหารและเครื่องดื่ม
+                  </a>
+                </h3>
+              </div>
+
+
+              <div role="presentation">
+                <h3 class="no-head-style">
+                  <a class="menu__link" href="http://www.nationtv.tv/main/gallery/category/event/">
+                    กิจกรรม/อีเว็นต์
+                  </a>
+                </h3>
+              </div>
+
+
+
+          </div>
+
+
+        </li>
+      </ul>
+    </li>
+
+    <!-- Program Menu -->
+    <li class="menu__item has-children">
+      <h2 class="no-head-style js-is-submenu"><a class="menu__link " href="http://www.nationtv.tv/main/program/">รายการทีวี</a></h2>
+      <ul class="cd-secondary-nav cd-tvmenu-nav is-hidden">
+        <li class="[ go-back ] [ menu__header text-center ]"><a class="submenu__head" href="javascript:void(0);">รายการทีวี</a></li>
+        <li class="js-nav-scroll-program scroll tv-menu__container">
+          <div class="">
+            <div class="menu__item visible-xs-block">
+              <a href="http://www.nationtv.tv/main/program/" class="menu__link">หน้าหลัก</a>
+            </div>
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Cafe-E/">Cafe E</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Cafe-E/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_bf7ijbcbe6j7b8b68698d.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Channel-Japan/">Channel Japan</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Channel-Japan/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_9jihak65d88bb8befj8h6.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/many-many-japan/">Many Many Japan</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/many-many-japan/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_fidfb8bgbj9cgh8dcffbe.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/One-World/">One World</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/One-World/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_5eh7egi6j9jja67jbjje8.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Open-Eyes-by-Madamnan/">Open Eyes by มาดามนัน</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Open-Eyes-by-Madamnan/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_a78bkb8ka8f6cabfc58ka.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/The-Hacker/">The Hacker</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/The-Hacker/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_6eibb8fbg56e5dhfakabe.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/World-weekend/">World weekend</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/World-weekend/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_c6gb555gcae5j6j7kbkke.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/kebtok-evening/">เก็บตกจากเนชั่น (ภาคค่ำ)</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/kebtok-evening/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_a8965c7gbeaidj7i5ea7h.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/kebtok-morning/">เก็บตกจากเนชั่น (ภาคเช้า)</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/kebtok-morning/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_j757fjic77ijcbgicgjd8.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/kebtok-afternoon/">เก็บตกจากเนชั่น (ภาคเที่ยง)</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/kebtok-afternoon/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_cacki7caci79b95ce6959.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/KKIT/">เกาเหลาไอที</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/KKIT/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_b89bi5hh66if955kcj99j.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/khaokhon-nation/">ข่าวข้นคนเนชั่น</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/khaokhon-nation/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_baj86ei77ibhfhg67bgej.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/khaokhon-morning/">ข่าวข้นรับอรุณ</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/khaokhon-morning/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_bi9ihdd767aiabia7aba7.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/kon-ruk-ban/">คนรักบ้าน</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/kon-ruk-ban/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_cja7a6jaaajkgbc7g5gjj.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/komchadluek/">คม-ชัด-ลึก</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/komchadluek/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_7jgce8bghcgd778ba8keb.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Champ/">คู่ชิงคู่แชมป์</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Champ/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_ackaa9hbhfa6da76aaj9j.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/JudchanuanKhao/">จุดชนวนข่าว</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/JudchanuanKhao/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_9b5cagbb8j758gj57hbek.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/SocialHelp/">ชุมชนระวังภัย</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/SocialHelp/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_6d7bg57e77b6ffkh5d5ah.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/lawyer/">ทนายอาสา</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/lawyer/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_gk8bbe9gcicfk8i6cc7ib.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Timeline/">ไทม์ไลน์  สุทธิชัย หยุ่น</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Timeline/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_hjcc7agkea977hd7eckif.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Nation-Mit-Night/">เนชั่นมิตรไนท์</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Nation-Mit-Night/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_jk8b7digi5hahabajbbba.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Nation-X-File/">เนชั่นเอ็กซ์ไฟล์</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Nation-X-File/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_kiaf6hfc8eae8k5ac5deb.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/viewtheworld/">มองเรา มองโลก</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/viewtheworld/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_jj7689559ccdahc7h7ha8.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Rak-lok/">รักโลก</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Rak-lok/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_57hje6facdch6c67kfjf6.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/cartip/">รู้เรื่องรถ กับพัฒนเดช</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/cartip/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_6fa8cab6h6iai7jfkg8bg.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/Line-Kanok/">ลายกนก</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/Line-Kanok/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_hi9ba5g85aai9jd98bbkc.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/fine/">สบายดี 24 ชม.</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/fine/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_he7b5hda56d5b5f5cieke.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/perfect/">สวย หล่อ perfect</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/perfect/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_e8hi7e7b56e6eab9hd856.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/SawasdeeAsian/">สวัสดีอาเซียน</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/SawasdeeAsian/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_75kkda8a7cahd5ihgga9b.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/ER-News/">ห้องข่าวฉุกเฉิน</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/ER-News/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_aa9bebjab6iffhkhfhba8.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/sam-hypnotize/">อ.แซม สะกดจิต</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/sam-hypnotize/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_f6585i7ak99gh8fihdga5.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/u-sabuy/">อยู่สบาย</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/u-sabuy/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_b6chc7ga5a9jjjaked5k7.jpg)"></a>
+                </div>
+
+
+
+
+                <div class="tv-menu__group">
+                  <h3 class="tv-menu__wrap"><a class="menu__link" href="http://www.nationtv.tv/main/program/fengshui/">ฮวงจุ้ยเบญจธาตุ</a></h3>
+                  <a href="http://www.nationtv.tv/main/program/fengshui/" class="menu__bg" style="background-image: url(http://www.nationtv.tv/nation-tv-libs/timthumb/timthumb.php?w=228&amp;h=68&amp;src=http%3A%2F%2Fresource.nationtv.tv%2Fprogram_photo%2F295x246_ce86eb9aa7hdfbgeig9c6.jpg)"></a>
+                </div>
+
+
+
+          </div>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Breaking News Menu -->
+    <li class="menu__item"><h2 class="no-head-style"><a class="menu__link " href="http://www.nationtv.tv/main/schedule/">ผังรายการ</a></h2></li>
+        <li class="social__wrap">
+      <a class="social__icon" href="https://www.facebook.com/NationChannelTV" target="_blank" rel="nofollow">
+        <i class="fa fa-facebook-square social__icon --topbar"></i></a>
+      <a class="social__icon" href="https://www.twitter.com/nationTV22" target="_blank" rel="nofollow">
+        <i class="fa fa-twitter-square social__icon --topbar"></i></a>
+      <a class="social__icon" href="https://plus.google.com/113463480259329482237" target="_blank" rel="nofollow">
+        <i class="fa fa-google-plus-square social__icon --topbar"></i></a>
+      <a class="social__icon" href="http://instagram.com/nationtv22/" target="_blank" rel="nofollow">
+        <i class="fa fa-instagram social__icon --topbar"></i></a>
+      <a class="social__icon" href="https://www.youtube.com/channel/UCIoFfVIOrRRbI-WVdDhTTwg" target="_blank" rel="nofollow">
+        <i class="fa fa-youtube-square social__icon --topbar"></i></a>
+          </li>
+  </ul>
+</nav>
+
+    <div id="cd-search" class="cd-search search__container">
+      <form>
+        <input type="search" class="search__input" placeholder="ค้นหาข่าว...">
+      </form>
+    </div>
+  </div>
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <script src=""></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
+    <script src="bower_components/autosize/dest/autosize.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/mainnav.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/jquery.mousewheel-3.0.6.min.js"></script>
+  <!--<script>
+      function init() {
+          window.addEventListener('scroll', function(e){
+              var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                  shrinkOn = 300,
+                  header = document.querySelector("header");
+              if (distanceY > shrinkOn) {
+                  classie.add(header,"smaller");
+              } else {
+                  if (classie.has(header,"smaller")) {
+                      classie.remove(header,"smaller");
+                  }
+              }
+          });
+      }
+      window.onload = init();
+  </script>-->
+</body>
+</html>
