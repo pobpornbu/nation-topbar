@@ -77,19 +77,21 @@
 				if(tempType != type){
 					tempType = type;
 
-					var $btn = $('js-submenu-link');
-					// console.log($btn);
-					var $btnScope = $('.js-nav #js-primary-nav .menu__item.has-children');
+					var $btn = $('.link-open-submenu');
+					var $btnScope = $('.js-nav .js-primary-nav .menu__item.has-children');
 					$btn.off('.nav');
 					$btnScope.off('.nav');
 
 					if(type == 'desktop'){
+						console.log($btnScope);
+
 						var eventName = Detectizr.device.type == 'tablet' ? 'click' : 'mouseenter';
 						$btn.on(eventName+'.nav', function(e){
 							e.preventDefault();
 							var selected = $(this);
 							if(eventName == 'click' && selected.hasClass('selected')){
-								$btnScope.trigger('mouseleave');console.log('trigger_mouseleave!!');
+								$btnScope.trigger('mouseleave');
+								//console.log('trigger_mouseleave!!');
 							}else{
 								selected.addClass('selected').parent().next('ul').removeClass('is-hidden').end().parents('.has-children').parent('ul').addClass('moves-out');
 								selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
@@ -115,16 +117,16 @@
 							theme: 'minimal-dark',
 							mouseWheel:{ enable: true, preventDefault: true, scrollAmount: 600, deltaFactor: 600}
 						});
+						// console.log($(".js-nav-scroll-gallery"));
 
 					}else if(type == 'mobile'){
 						console.log($btn);
 						$btn.on('click.nav', function(e){ 
 							e.preventDefault();
-							e.stopPropagation();
 
 							var selected = $(this);
 							var $ul = selected.parent().next('ul');
-							console.log('selected');
+
 							selected.addClass('selected');
 							$ul.removeClass('is-hidden').end().parents('.has-children').parent('ul').addClass('moves-out');
 							selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');

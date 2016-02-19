@@ -476,6 +476,38 @@ Main components
   background-position: center center;
   background-size: 40px 40px;
 }
+.open-slide-menu {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+.hamberger .primary-nav.nav-is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+@media only screen and (max-width: 767px) {
+  .full-menu .primary-nav.nav-is-visible {
+    visibility: visible;
+    -webkit-transition: visibility 0s 0s;
+    -moz-transition: visibility 0s 0s;
+    transition: visibility 0s 0s;
+  }
+}
+.hamberger.nav-on-left .primary-nav.nav-is-visible {
+  right: auto;
+  left: 0;
+}
+.hamberger.nav-on-left .main-content.nav-is-visible,
+.hamberger.nav-on-left .main-header.nav-is-visible {
+  -webkit-transform: translateX(260px);
+  -moz-transform: translateX(260px);
+  -o-transform: translateX(260px);
+  -ms-transform: translateX(260px);
+  transform: translateX(260px);
+}
 @media only screen and (max-width: 767px) {
   .primary-nav {
     /* by default .primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
@@ -483,12 +515,6 @@ Main components
     -webkit-transition: visibility 0s 0.3s;
     -moz-transition: visibility 0s 0.3s;
     transition: visibility 0s 0.3s;
-  }
-  .primary-nav.nav-is-visible {
-    visibility: visible;
-    -webkit-transition: visibility 0s 0s;
-    -moz-transition: visibility 0s 0s;
-    transition: visibility 0s 0s;
   }
 }
 @media only screen and (min-width: 768px) {

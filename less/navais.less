@@ -88,6 +88,7 @@ Main components
     transform: translateX(260px);
   }
 }
+
 .main-content {
   background: #e2e3df;
   min-height: 100vh;
@@ -464,19 +465,43 @@ Main components
   background-position: center center;
   background-size: 40px 40px;
 }
-@media only screen and (max-width: 767px) {
+
+// Open Slide Menu
+
+.open-slide-menu {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;  
+}
+.hamberger .primary-nav.nav-is-visible { .open-slide-menu; }
+
+.full-menu .primary-nav.nav-is-visible {
+  @media only screen and (max-width: 767px) {
+    .open-slide-menu;
+  }
+}
+
+.hamberger.nav-on-left {
   .primary-nav {
+    &.nav-is-visible {
+      right: auto; left: 0;
+    }
+  }
+  .main-content, .main-header {
+    &.nav-is-visible {
+      .transform(translateX(260px));
+    }
+  }
+}
+
+.primary-nav {
+  @media only screen and (max-width: 767px) {
     /* by default .primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
     visibility: hidden;
     -webkit-transition: visibility 0s 0.3s;
     -moz-transition: visibility 0s 0.3s;
     transition: visibility 0s 0.3s;
-  }
-  .primary-nav.nav-is-visible {
-    visibility: visible;
-    -webkit-transition: visibility 0s 0s;
-    -moz-transition: visibility 0s 0s;
-    transition: visibility 0s 0s;
   }
 }
 .full-menu {
