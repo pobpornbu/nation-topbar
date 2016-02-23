@@ -15,11 +15,11 @@
 	width:100%;
 	position: relative;
 }
-#ais_topbar_top #ul-main-menu {
+/*#ais_topbar_top #ul-main-menu {
 	float: left;
 	margin: 0;
 	padding: 0;
-}
+}*/
 #ais_topbar_top #ul-main-menu ul {
     margin: 0;
     padding: 0;
@@ -57,21 +57,19 @@
 	height:43px;
 	background: url(../images/menu/main_menu_lock.png) bottom;
 }
-#ais_topbar_top .lang {
+#ais_topbar_top a .lang{
 	font-family: 'db_helvethaicaais_x55_regular';
 	float: right;
 	width: 30px;
-	font-size: 12px;
+	font-size: 14px;
 	text-align: center;
 	cursor: pointer;
 	line-height:46px;
 	height:43px;
-}
-#ais_topbar_top .lang a {
 	color: #515151;
 	text-decoration:none;
 }
-#ais_topbar_top .lang a:hover {
+#ais_topbar_top a:hover .lang  {
 	color: #73a333;
 }
 #ais_topbar_top .lang.current {
@@ -568,9 +566,15 @@
 	margin-top: -5px;
 }
 #ais_topbar .topbar_lang {
-	margin-right: 10px;
-	display: block;
+	    /* margin-right: 10px; */
+    display: block;
+    width: 75px;
+    position: absolute;
+    float: right;
+    right: 10px;
+    top: 0px;
 }
+
 #ais_topbar .topbar_eservice {
 	position: absolute;
 	right: 15px;
@@ -872,19 +876,19 @@
 	font-size: 16px;
 }
 
-#ais_topbar.hamberger #ul-main-menu, #ais_topbar.hamberger #ais_topbar_bottom, #ais_topbar.hamberger .desktop-hide {
+/* #ais_topbar.hamberger #ul-main-menu, #ais_topbar.hamberger #ais_topbar_bottom, #ais_topbar.hamberger .desktop-hide {
 	display: none;
-}
+}*/
 #ais_topbar.hamberger #ais_topbar_top {
     height: 50px;
 }
 #ais_topbar.hamberger .topbar_eservice {
-    float: right;
+    /*float: right;*/
     margin: 7px 10px 0 10px;
     cursor: pointer;
     padding-top: 1px;
-    position: relative;
-    right: 0;
+    /*position: relative;*/
+    right: 85px;
     top: 0;
     z-index: auto;
 }
@@ -926,8 +930,12 @@
     moz-opacity: 1;
     opacity: 1;
 }
+#ais_topbar .topbar_lang span {
+	line-height:50px;
+	padding-top:10px;
+	}
 #ais_topbar.hamberger #ais_topbar_top .lang {
-	line-height:52px;
+	line-height: 50px;
 	height:50px;
 }
 #ais_topbar.hamberger #ais_topbar_top .lang.current {

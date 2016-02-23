@@ -34,6 +34,7 @@ img {
   /* make images responsive */
   max-width: 100%;
 }
+ul { list-style: none none outside; margin: 0; padding: 0; }
 input {
   font-family: sans-serif;
   font-size: 1.6rem;
@@ -147,6 +148,9 @@ Main components
   // }
   li {
     display: inline-block;
+  }
+  .full-menu & {
+    float: left; margin: 0; padding: 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -364,12 +368,13 @@ Main components
   }
 }
 .primary-nav,
-.primary-nav ul {
+.primary-nav .secondary-nav {
   list-style: none none outside;
   position: fixed;
   top: 0;
   right: 0;
   padding: 0;
+  margin: 0;
   height: 100%;
   width: 260px;
   background: red;
@@ -383,7 +388,7 @@ Main components
 }
 
 .primary-nav a,
-.primary-nav ul a {
+.primary-nav .secondary-nav a {
   display: block;
   // height: 50px;
   // line-height: 50px;
@@ -398,19 +403,19 @@ Main components
   .transition(transform 0.3s, opacity 0.3s);
 }
 .primary-nav.is-hidden,
-.primary-nav ul.is-hidden {
+.primary-nav .secondary-nav.is-hidden {
   /* secondary navigations hidden by default */
   .transform(translateX(100%));
 }
 .primary-nav.moves-out > li > a,
-.primary-nav ul.moves-out > li > a {
+.primary-nav .secondary-nav.moves-out > li > a {
   /* push the navigation items to the left - and lower down opacity - when secondary nav slides in */
   .transform(translateX(-100%));
   opacity: 0;
 }
 @media only screen and (max-width: 767px) {
   .nav-on-left .primary-nav,
-  .nav-on-left .primary-nav ul {
+  .nav-on-left .primary-nav .secondary-nav {
     right: auto;
     left: 0;
   }
@@ -529,7 +534,7 @@ Main components
       transform: translateX(0);
       opacity: 1;
     }
-    .primary-nav ul {
+    .primary-nav .secondary-nav {
       position: static;
       height: auto;
       width: auto;
@@ -537,7 +542,7 @@ Main components
       overflow: visible;
       z-index: 3;
     }
-    .primary-nav ul.is-hidden {
+    .primary-nav .secondary-nav.is-hidden {
       /* reset mobile style */
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);
@@ -545,7 +550,7 @@ Main components
       -o-transform: translateX(0);
       transform: translateX(0);
     }
-    .primary-nav ul.moves-out > li > a {
+    .primary-nav .secondary-nav.moves-out > li > a {
       /* reset mobile style */
       -webkit-transform: translateX(0);
       -moz-transform: translateX(0);
@@ -796,14 +801,15 @@ Main components
     }
   }
 }
-.has-children > a,
-.go-back a {
+
+.has-children > .go-back-head,
+.go-back .go-back-head {
   position: relative;
 }
-.has-children > a::before,
-.has-children > a::after,
-.go-back a::before,
-.go-back a::after {
+.has-children > .go-back-head::before,
+.has-children > .go-back-head::after,
+.go-back .go-back-head::before,
+.go-back .go-back-head::after {
   /* arrow icon in CSS - for element with nested unordered lists */
   /*content: '';*/
   position: absolute;
@@ -816,16 +822,16 @@ Main components
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.has-children > a::before,
-.go-back a::before {
+.has-children > .go-back-head::before,
+.go-back .go-back-head::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.has-children > a::after,
-.go-back a::after {
+.has-children > .go-back-head::after,
+.go-back .go-back-head::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -833,24 +839,24 @@ Main components
   transform: rotate(-45deg);
 }
 @media only screen and (min-width: 768px) {
-  .has-children > a::before,
-  .has-children > a::after,
-  .go-back a::before,
-  .go-back a::after {
+  .has-children > .go-back-head::before,
+  .has-children > .go-back-head::after,
+  .go-back .go-back-head::before,
+  .go-back .go-back-head::after {
     background: #c9cbc4;
   }
-  .has-children > a:hover::before,
-  .has-children > a:hover::after,
-  .go-back a:hover::before,
-  .go-back a:hover::after {
+  .has-children > .go-back-head:hover::before,
+  .has-children > .go-back-head:hover::after,
+  .go-back .go-back-head:hover::before,
+  .go-back .go-back-head:hover::after {
     background: #69aa6f;
   }
 }
-.has-children > a {
+.has-children > .go-back-head {
   padding-right: 40px;
 }
-.has-children > a::before,
-.has-children > a::after {
+.has-children > .go-back-head::before,
+.has-children > .go-back-head::after {
   /* arrow goes on the right side - children navigation */
   right: 20px;
   -webkit-transform-origin: 9px 50%;
@@ -859,11 +865,11 @@ Main components
   -o-transform-origin: 9px 50%;
   transform-origin: 9px 50%;
 }
-.primary-nav .go-back a {
+.primary-nav .go-back .go-back-head {
   padding-left: 40px;
 }
-.primary-nav .go-back a::before,
-.primary-nav .go-back a::after {
+.primary-nav .go-back .go-back-head::before,
+.primary-nav .go-back .go-back-head::after {
   /* arrow goes on the left side - go back button */
   left: 20px;
   -webkit-transform-origin: 1px 50%;
@@ -873,16 +879,16 @@ Main components
   transform-origin: 1px 50%;
 }
 @media only screen and (min-width: 768px) {
-  .has-children > a::before,
-  .has-children > a::after {
+  .has-children > .go-back-head::before,
+  .has-children > .go-back-head::after {
     right: 15%;
   }
-  .primary-nav > .has-children > a {
+  .primary-nav > .has-children > .go-back-head {
     /* main navigation arrows on larger devices */
     /*padding-right: 30px !important;*/
   }
-  .primary-nav > .has-children > a::before,
-  .primary-nav > .has-children > a::after {
+  .primary-nav > .has-children > .go-back-head::before,
+  .primary-nav > .has-children > .go-back-head::after {
     width: 9px;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -896,40 +902,40 @@ Main components
     -moz-transition: width 0.3s, -moz-transform 0.3s;
     transition: width 0.3s, transform 0.3s;
   }
-  .primary-nav > .has-children > a::before {
+  .primary-nav > .has-children > .go-back-head::before {
     right: 12px;
   }
-  .primary-nav > .has-children > a::after {
+  .primary-nav > .has-children > .go-back-head::after {
     right: 7px;
   }
-  .primary-nav > .has-children > a.selected::before,
-  .primary-nav > .has-children > a.selected::after {
+  .primary-nav > .has-children > .go-back-head.selected::before,
+  .primary-nav > .has-children > .go-back-head.selected::after {
     width: 14px;
   }
-  .primary-nav > .has-children > a.selected::before {
+  .primary-nav > .has-children > .go-back-head.selected::before {
     -webkit-transform: translateX(5px) rotate(-45deg);
     -moz-transform: translateX(5px) rotate(-45deg);
     -ms-transform: translateX(5px) rotate(-45deg);
     -o-transform: translateX(5px) rotate(-45deg);
     transform: translateX(5px) rotate(-45deg);
   }
-  .primary-nav > .has-children > a.selected::after {
+  .primary-nav > .has-children > .go-back-head.selected::after {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .secondary-nav > .has-children > a::before,
-  .secondary-nav > .has-children > a::after {
+  .secondary-nav > .has-children > .go-back-head::before,
+  .secondary-nav > .has-children > .go-back-head::after {
     /* remove arrows on secondary nav titles */
     display: none;
   }
-  .primary-nav .go-back a {
+  .primary-nav .go-back .go-back-head {
     padding-left: 20px;
   }
-  .primary-nav .go-back a::before,
-  .primary-nav .go-back a::after {
+  .primary-nav .go-back .go-back-head::before,
+  .primary-nav .go-back .go-back-head::after {
     left: 1px;
   }
 }
@@ -1048,6 +1054,15 @@ Main components
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.js-toggle-submenu {
+  overflow-y: hidden;
+  .transition(max-height 0.7s ease-out);
+  max-height: 0;
+}
+.js-toggle-submenu.active {
+  max-height: 135px;
 }
 /* -------------------------------- 
 
