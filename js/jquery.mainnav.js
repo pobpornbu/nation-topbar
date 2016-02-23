@@ -43,7 +43,7 @@
 				closeNav();
 			});
 
-			//close lateral menu on mobile 
+			//close lateral menu on mobile
 			$('.js-overlay').on('swiperight', function(){
 				if($('.js-primary-nav').hasClass('nav-is-visible')) {
 					closeNav();
@@ -66,8 +66,8 @@
 			$('.go-back').on('click', function(){
 				$(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
 			});
-			
-			//prevent default clicking on direct children of .js-primary-nav 
+
+			//prevent default clicking on direct children of .js-primary-nav
 			/*$('.js-primary-nav').children('.has-children').children('a').on('click', function(event){
 				event.preventDefault();
 			});*/
@@ -77,8 +77,10 @@
 				if(tempType != type){
 					tempType = type;
 
-					var $btn = $('.link-open-submenu');
-					var $btnScope = $('.js-nav .js-primary-nav .menu__item.has-children');
+					var $btn = $('.link-open-submenu'),
+						$btnScope = $('.js-nav .js-primary-nav .menu__item.has-children'),
+						$primaryLink = $('.js-header-buttons');
+
 					$btn.off('.nav');
 					$btnScope.off('.nav');
 
@@ -104,7 +106,7 @@
 							selected.removeClass('selected').parent().next('ul').addClass('is-hidden').end().parents('.has-children').parent('ul').removeClass('moves-out');
 							$('.js-overlay').removeClass('is-visible');
 						});
-						
+
 						// Menu Scrollbar
 						$(".js-nav-scroll-news, .js-nav-scroll-program").mCustomScrollbar({
 							setHeight: 300,
@@ -117,23 +119,56 @@
 							theme: 'minimal-dark',
 							mouseWheel:{ enable: true, preventDefault: true, scrollAmount: 600, deltaFactor: 600}
 						});
+
+						$primaryLink.children().appendTo('.js-header-buttons');
+						$('#main-menu-topnew1').children().text('ลูกค้าบุคคล');
 						// console.log($(".js-nav-scroll-gallery"));
 
 					}else if(type == 'mobile'){
 						console.log($btn);
-						$btn.on('click.nav', function(e){ 
+						// $btn.on('click.nav', function(e){
+						// 	e.preventDefault();
+
+						// 	var selected = $(this);
+						// 	var $ul = selected.parent().next('ul');
+
+						// 	selected.addClass('selected');
+						// 	$ul.removeClass('is-hidden').end().parents('.has-children').parent('ul').addClass('moves-out');
+						// 	selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+						// 	$('.js-overlay').addClass('is-visible');
+						// });
+            // $styledSelect.on("click", function(e){
+            //     e.stopPropagation();
+            //     if($styledSelect.hasClass('active')){
+            //         $styledSelect.removeClass('active');
+            //         $list.hide();
+            //     }else{
+            //         $('.select__selected.active').each(function(){
+            //             $(this).removeClass('active').next('ul.select__options').hide();
+            //         });
+            //         $(this).toggleClass('active').next('ul.select__options').toggle();
+            //     }
+            // });
+
+						$btn.on('click.nav', function(e){
 							e.preventDefault();
-
-							var selected = $(this);
-							var $ul = selected.parent().next('ul');
-
-							selected.addClass('selected');
-							$ul.removeClass('is-hidden').end().parents('.has-children').parent('ul').addClass('moves-out');
-							selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
-							$('.js-overlay').addClass('is-visible');
+							var $submenu = $(this).parent().next('.js-toggle-submenu');
+							console.log($submenu.text());
+							// $submenu.toggleClass('is-hidden');
+							if($submenu.hasClass('active')){
+								$submenu.removeClass('active');
+							}else{
+								$('.js-toggle-submenu.active').each(function(){
+									$(this).removeClass('active');
+								});
+								$(this).toggleClass('active');
+							}
 						});
-						
+
 						$(".js-nav-scroll-news, .js-nav-scroll-gallery, .js-nav-scroll-program").mCustomScrollbar("destroy");
+
+						$primaryLink.children().appendTo('.js-primary-link');
+						$('#main-menu-topnew1').children().text('หน้าแรกเอไอเอส');
 					}
 				}
 			});
@@ -171,7 +206,7 @@
 						var getLink 		 	= $(this).data('href'); //get attr data-href for open link
 						if(getLink){
 							window.location.href = getLink;
-						}		
+						}
 					});
 				}*/
 			});
@@ -190,7 +225,7 @@
 
 			function toggleSearch(type) {
 				if(type=="close") {
-					//close serach 
+					//close serach
 					$('.js-search').removeClass('is-visible');
 					$('.js-search-trigger').removeClass('search-is-visible');
 					$('.js-overlay').removeClass('search-is-visible');
@@ -206,7 +241,7 @@
 
 			function checkWindowWidth() {
 				//check window width (scrollbar included)
-				var e = window, 
+				var e = window,
 		            a = 'inner';
 		        if (!('innerWidth' in window )) {
 		            a = 'client';
@@ -242,7 +277,7 @@
 					navigation.detach();
 					navigation.insertAfter('.js-main-content');
 					navigation.trigger('nav-type','mobile');
-				} else if(opts.theme == 'mini-menu') {
+				} else {
 					theme.addClass('hamberger');
 					navigation.detach();
 					navigation.insertAfter('.js-main-content');
