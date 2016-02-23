@@ -77,10 +77,8 @@
 				if(tempType != type){
 					tempType = type;
 
-					var $btn = $('.link-open-submenu'),
-						$btnScope = $('.js-nav .js-primary-nav .menu__item.has-children'),
-						$primaryLink = $('.js-header-buttons');
-
+					var $btn = $('.link-open-submenu');
+					var $btnScope = $('.js-nav .js-primary-nav .menu__item.has-children');
 					$btn.off('.nav');
 					$btnScope.off('.nav');
 
@@ -119,56 +117,23 @@
 							theme: 'minimal-dark',
 							mouseWheel:{ enable: true, preventDefault: true, scrollAmount: 600, deltaFactor: 600}
 						});
-						
-						$primaryLink.children().appendTo('.js-header-buttons');
-						$('#main-menu-topnew1').children().text('ลูกค้าบุคคล');
 						// console.log($(".js-nav-scroll-gallery"));
 
 					}else if(type == 'mobile'){
 						console.log($btn);
-						// $btn.on('click.nav', function(e){ 
-						// 	e.preventDefault();
-
-						// 	var selected = $(this);
-						// 	var $ul = selected.parent().next('ul');
-
-						// 	selected.addClass('selected');
-						// 	$ul.removeClass('is-hidden').end().parents('.has-children').parent('ul').addClass('moves-out');
-						// 	selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
-						// 	$('.js-overlay').addClass('is-visible');
-						// });
-            // $styledSelect.on("click", function(e){
-            //     e.stopPropagation();
-            //     if($styledSelect.hasClass('active')){
-            //         $styledSelect.removeClass('active');
-            //         $list.hide();
-            //     }else{
-            //         $('.select__selected.active').each(function(){
-            //             $(this).removeClass('active').next('ul.select__options').hide();
-            //         });
-            //         $(this).toggleClass('active').next('ul.select__options').toggle();
-            //     }
-            // });
-						
-						$btn.on('click.nav', function(e){
+						$btn.on('click.nav', function(e){ 
 							e.preventDefault();
-							var $submenu = $(this).parent().next('.js-toggle-submenu');
-							console.log($submenu.text());
-							// $submenu.toggleClass('is-hidden');
-							if($submenu.hasClass('active')){
-								$submenu.removeClass('active');
-							}else{
-								$('.js-toggle-submenu.active').each(function(){
-									$(this).removeClass('active');
-								});
-								$(this).toggleClass('active');
-							}
+
+							var selected = $(this);
+							var $ul = selected.parent().next('ul');
+
+							selected.addClass('selected');
+							$ul.removeClass('is-hidden').end().parents('.has-children').parent('ul').addClass('moves-out');
+							selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+							$('.js-overlay').addClass('is-visible');
 						});
-
+						
 						$(".js-nav-scroll-news, .js-nav-scroll-gallery, .js-nav-scroll-program").mCustomScrollbar("destroy");
-
-						$primaryLink.children().appendTo('.js-primary-link');
-						$('#main-menu-topnew1').children().text('หน้าแรกเอไอเอส');
 					}
 				}
 			});
@@ -277,7 +242,7 @@
 					navigation.detach();
 					navigation.insertAfter('.js-main-content');
 					navigation.trigger('nav-type','mobile');
-				} else {
+				} else if(opts.theme == 'mini-menu') {
 					theme.addClass('hamberger');
 					navigation.detach();
 					navigation.insertAfter('.js-main-content');
