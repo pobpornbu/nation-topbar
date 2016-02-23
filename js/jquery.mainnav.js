@@ -78,8 +78,8 @@
 					tempType = type;
 
 					var $btn = $('.link-open-submenu'),
-						$btnScope = $('.js-nav .js-primary-nav .menu__item.has-children'),
-						$primaryLink = $('.js-header-buttons');
+							$btnScope = $('.js-nav .js-primary-nav .menu__item.has-children'),
+							$primaryLink = $('.js-header-buttons');
 
 					$btn.off('.nav');
 					$btnScope.off('.nav');
@@ -137,6 +137,7 @@
 						// 	selected.parents('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
 						// 	$('.js-overlay').addClass('is-visible');
 						// });
+
             // $styledSelect.on("click", function(e){
             //     e.stopPropagation();
             //     if($styledSelect.hasClass('active')){
@@ -152,17 +153,22 @@
 
 						$btn.on('click.nav', function(e){
 							e.preventDefault();
-							var $submenu = $(this).parent().next('.js-toggle-submenu');
-							console.log($submenu.text());
+							var $submenu = $('.js-toggle-submenu');
+							console.log('----------');
 							// $submenu.toggleClass('is-hidden');
-							if($submenu.hasClass('active')){
-								$submenu.removeClass('active');
-							}else{
-								$('.js-toggle-submenu.active').each(function(){
-									$(this).removeClass('active');
+							// if($btn.hasClass('active')){
+							// 	console.log('step1');
+							// 	$btn.removeClass('active');
+							// 	$submenu.removeClass('active');
+
+							// }else{
+								$('.link-open-submenu.active').each(function(){
+									console.log('removeClass');
+									$('.link-open-submenu').removeClass('active').parent().next('.js-toggle-submenu').removeClass('active');
 								});
-								$(this).toggleClass('active');
-							}
+								console.log('toggleClass');
+								$(this).toggleClass('active').parent().next('.js-toggle-submenu').toggleClass('active');
+							// }
 						});
 
 						$(".js-nav-scroll-news, .js-nav-scroll-gallery, .js-nav-scroll-program").mCustomScrollbar("destroy");
